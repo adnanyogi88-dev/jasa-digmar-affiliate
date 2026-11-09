@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jasa Digmar Affiliate - Solusi Digital Marketing & Affiliate Terpercaya. Jasa pembuatan website, Google Ads, Meta Ads, TikTok Affiliate, SEO & Digital Branding.">
+    <meta name="keywords" content="digital marketing, affiliate marketing, jasa website, google ads, meta ads, tiktok affiliate, SEO, branding digital">
+    <title>DIGMAR — Solusi Digital Marketing & Affiliate Terpercaya</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1e40af',
+                            800: '#1e3a8a',
+                            900: '#1e3370',
+                        },
+                        accent: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        },
+                        dark: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans text-gray-700 bg-white antialiased">
+
+    <!-- ============================================ -->
+    <!-- NAVBAR -->
+    <!-- ============================================ -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#beranda" class="flex items-center space-x-3 group">
+                    <img src="images/logo-white.svg" alt="DIGMAR Logo" class="h-10 w-auto transform group-hover:scale-105 transition-transform duration-300">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="#beranda" class="nav-link active px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">Beranda</a>
+                    <a href="#layanan" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">Layanan</a>
+                    <a href="#tentang" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">Tentang Kami</a>
+                    <a href="#portfolio" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">Portfolio</a>
+                    <a href="#testimoni" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">Testimoni</a>
+                    <a href="#kontak" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">Kontak</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20layanan%20digital%20marketing%20%26%20affiliate%20Anda"
+                       target="_blank"
+                       class="inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-accent-500 to-accent-600 text-dark-900 font-semibold text-sm rounded-full hover:shadow-lg hover:shadow-accent-500/30 transform hover:-translate-y-0.5 transition-all duration-300">
+                        <i class="fab fa-whatsapp mr-2 text-lg text-green-700"></i>
+                        0877-7632-9910
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden relative w-10 h-10 flex items-center justify-center text-white focus:outline-none" aria-label="Toggle menu">
+                    <div class="hamburger-lines">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                        <span class="line line-3"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden mobile-menu-hidden overflow-hidden transition-all duration-500">
+            <div class="px-4 pb-6 pt-2 bg-dark-900/98 backdrop-blur-xl border-t border-white/5">
+                <div class="flex flex-col space-y-1">
+                    <a href="#beranda" class="mobile-nav-link px-4 py-3 rounded-xl text-white/80 hover:text-white hover:bg-white/5 font-medium transition-all duration-200">Beranda</a>
+                    <a href="#layanan" class="mobile-nav-link px-4 py-3 rounded-xl text-white/80 hover:text-white hover:bg-white/5 font-medium transition-all duration-200">Layanan</a>
+                    <a href="#tentang" class="mobile-nav-link px-4 py-3 rounded-xl text-white/80 hover:text-white hover:bg-white/5 font-medium transition-all duration-200">Tentang Kami</a>
+                    <a href="#portfolio" class="mobile-nav-link px-4 py-3 rounded-xl text-white/80 hover:text-white hover:bg-white/5 font-medium transition-all duration-200">Portfolio</a>
+                    <a href="#testimoni" class="mobile-nav-link px-4 py-3 rounded-xl text-white/80 hover:text-white hover:bg-white/5 font-medium transition-all duration-200">Testimoni</a>
+                    <a href="#kontak" class="mobile-nav-link px-4 py-3 rounded-xl text-white/80 hover:text-white hover:bg-white/5 font-medium transition-all duration-200">Kontak</a>
+                </div>
+                <div class="mt-4 pt-4 border-t border-white/10">
+                    <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20layanan%20Anda"
+                       target="_blank"
+                       class="flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-accent-500 to-accent-600 text-dark-900 font-semibold rounded-xl hover:shadow-lg transition-all duration-300">
+                        <i class="fab fa-whatsapp mr-2 text-lg text-green-700"></i>
+                        WhatsApp: 0877-7632-9910
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION -->
+    <!-- ============================================ -->
+    <section id="beranda" class="relative min-h-screen flex items-center overflow-hidden">
+        <!-- Background -->
+        <div class="absolute inset-0 hero-bg"></div>
+
+        <!-- Animated Particles / Shapes -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="floating-shape shape-4"></div>
+            <div class="floating-shape shape-5"></div>
+        </div>
+
+        <!-- Grid Pattern Overlay -->
+        <div class="absolute inset-0 hero-grid-pattern opacity-5"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-0">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="text-center lg:text-left">
+                    <div class="animate-on-scroll fade-up">
+                        <span class="inline-flex items-center px-4 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/90 text-sm font-medium mb-6">
+                            <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                            #1 Digital Marketing Agency Indonesia
+                        </span>
+                    </div>
+
+                    <h1 class="animate-on-scroll fade-up delay-100">
+                        <span class="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-tight">
+                            Solusi
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-500"> Digital Marketing</span>
+                        </span>
+                        <span class="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-tight mt-2">
+                            & Affiliate
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-300"> Terpercaya</span>
+                        </span>
+                    </h1>
+
+                    <p class="mt-6 text-lg sm:text-xl text-white/70 max-w-xl mx-auto lg:mx-0 leading-relaxed animate-on-scroll fade-up delay-200">
+                        Tingkatkan bisnis Anda dengan strategi digital marketing yang terukur dan efektif. Dari pembuatan website hingga pengelolaan iklan digital, kami siap membantu pertumbuhan bisnis Anda.
+                    </p>
+
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-on-scroll fade-up delay-300">
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20ingin%20konsultasi%20gratis%20untuk%20bisnis%20saya"
+                           target="_blank"
+                           class="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-accent-500 to-accent-600 text-dark-900 font-bold rounded-2xl hover:shadow-2xl hover:shadow-accent-500/30 transform hover:-translate-y-1 transition-all duration-300">
+                            Konsultasi Gratis
+                            <i class="fas fa-arrow-right ml-3 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#portfolio"
+                           class="group inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-2xl hover:bg-white/20 transition-all duration-300">
+                            <i class="fas fa-award mr-3 text-accent-400"></i>
+                            Lihat Bukti Portofolio
+                        </a>
+                    </div>
+
+                    <!-- Trust Badges with real clients from portfolio -->
+                    <div class="mt-12 animate-on-scroll fade-up delay-400">
+                        <p class="text-white/40 text-xs font-semibold uppercase tracking-wider mb-4">Pengalaman Menangani Brand &amp; Korporasi Terkemuka</p>
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 opacity-75">
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-white/80 font-bold text-sm tracking-wide">BFI FINANCE</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-white/80 font-bold text-sm tracking-wide">DOSS CAMERA</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-white/80 font-bold text-sm tracking-wide">BETA PRAMESTI</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-white/80 font-bold text-sm tracking-wide">JAYCO STORE</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-white/80 font-bold text-sm tracking-wide">WATERMART</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual -->
+                <div class="hidden lg:flex justify-center items-center animate-on-scroll fade-left delay-200">
+                    <div class="relative">
+                        <!-- Main Dashboard Card -->
+                        <div class="w-96 h-80 bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 p-6 shadow-2xl">
+                            <div class="flex items-center space-x-3 mb-6">
+                                <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="h-3 bg-white/20 rounded-full w-3/4"></div>
+                                <div class="h-3 bg-white/15 rounded-full w-1/2"></div>
+                                <div class="mt-6 grid grid-cols-3 gap-3">
+                                    <div class="h-20 bg-gradient-to-br from-primary-500/30 to-primary-600/30 rounded-xl border border-white/10"></div>
+                                    <div class="h-20 bg-gradient-to-br from-accent-500/30 to-accent-600/30 rounded-xl border border-white/10"></div>
+                                    <div class="h-20 bg-gradient-to-br from-green-500/30 to-green-600/30 rounded-xl border border-white/10"></div>
+                                </div>
+                                <div class="h-16 bg-white/10 rounded-xl border border-white/10 mt-4"></div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Stats Card -->
+                        <div class="absolute -top-6 -right-6 bg-white/15 backdrop-blur-xl rounded-2xl border border-white/20 p-4 shadow-xl floating-card">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-green-500/20 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-chart-line text-green-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-white/50 text-xs">Revenue Growth</p>
+                                    <p class="text-white font-bold text-lg">+247%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Conversion Card -->
+                        <div class="absolute -bottom-4 -left-8 bg-white/15 backdrop-blur-xl rounded-2xl border border-white/20 p-4 shadow-xl floating-card-alt">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-accent-500/20 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-bullseye text-accent-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-white/50 text-xs">Conversion Rate</p>
+                                    <p class="text-white font-bold text-lg">12.8%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <a href="#layanan" class="text-white/40 hover:text-white/70 transition-colors">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- LAYANAN / SERVICES SECTION -->
+    <!-- ============================================ -->
+    <section id="layanan" class="py-20 lg:py-32 bg-gray-50 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary-500/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent-500/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                <span class="animate-on-scroll fade-up inline-block px-4 py-1.5 bg-primary-50 text-primary-700 text-sm font-semibold rounded-full mb-4">
+                    LAYANAN KAMI
+                </span>
+                <h2 class="animate-on-scroll fade-up delay-100 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dark-900 leading-tight">
+                    Layanan Digital Marketing
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-700"> Terlengkap</span>
+                </h2>
+                <p class="animate-on-scroll fade-up delay-200 mt-4 text-lg text-gray-500 leading-relaxed">
+                    Kami menyediakan berbagai layanan digital marketing yang dirancang untuk membantu bisnis Anda tumbuh dan berkembang di era digital.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+                <!-- Service Card 1: Pembuatan Website -->
+                <div class="animate-on-scroll fade-up delay-100 group">
+                    <div class="service-card h-full bg-white rounded-2xl p-8 border border-gray-100 hover:border-primary-200 shadow-sm hover:shadow-xl transition-all duration-500 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-500/5 to-transparent rounded-bl-full transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-none"></div>
+                        <div class="relative">
+                            <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary-500/20 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                                <i class="fas fa-laptop-code text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark-900 mb-3 group-hover:text-primary-700 transition-colors">Jasa Pembuatan Website</h3>
+                            <p class="text-gray-500 leading-relaxed mb-4">Website profesional untuk bisnis Anda — Company Profile, Toko Online, dan Landing Page yang menarik dan responsif.</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-primary-500 mr-2"></i>
+                                    Company Profile
+                                </li>
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-primary-500 mr-2"></i>
+                                    Toko Online / E-Commerce
+                                </li>
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-primary-500 mr-2"></i>
+                                    Landing Page Konversi Tinggi
+                                </li>
+                            </ul>
+                            <a href="#kontak" class="inline-flex items-center text-primary-600 font-semibold text-sm group-hover:text-primary-700">
+                                Pelajari Selengkapnya
+                                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 2: Google Ads -->
+                <div class="animate-on-scroll fade-up delay-200 group">
+                    <div class="service-card h-full bg-white rounded-2xl p-8 border border-gray-100 hover:border-blue-200 shadow-sm hover:shadow-xl transition-all duration-500 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/5 to-transparent rounded-bl-full transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-none"></div>
+                        <div class="relative">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                                <i class="fab fa-google text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark-900 mb-3 group-hover:text-blue-600 transition-colors">Google Ads Management</h3>
+                            <p class="text-gray-500 leading-relaxed mb-4">Optimasi iklan Google Ads untuk menjangkau calon pelanggan yang tepat dengan budget yang efisien.</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                    Search Ads & Display Ads
+                                </li>
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                    YouTube Ads
+                                </li>
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                    Google Shopping Ads
+                                </li>
+                            </ul>
+                            <a href="#kontak" class="inline-flex items-center text-blue-600 font-semibold text-sm group-hover:text-blue-700">
+                                Pelajari Selengkapnya
+                                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 3: Meta Ads -->
+                <div class="animate-on-scroll fade-up delay-300 group">
+                    <div class="service-card h-full bg-white rounded-2xl p-8 border border-gray-100 hover:border-indigo-200 shadow-sm hover:shadow-xl transition-all duration-500 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-500/5 to-transparent rounded-bl-full transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-none"></div>
+                        <div class="relative">
+                            <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-500/20 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                                <i class="fab fa-meta text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark-900 mb-3 group-hover:text-indigo-600 transition-colors">Meta Ads (FB & IG)</h3>
+                            <p class="text-gray-500 leading-relaxed mb-4">Jangkau jutaan pengguna Facebook & Instagram dengan iklan yang terarah dan terkonversi tinggi.</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                    Facebook & Instagram Ads
+                                </li>
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                    Retargeting & Lookalike
+                                </li>
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                    A/B Testing & Optimasi
+                                </li>
+                            </ul>
+                            <a href="#kontak" class="inline-flex items-center text-indigo-600 font-semibold text-sm group-hover:text-indigo-700">
+                                Pelajari Selengkapnya
+                                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 4: TikTok Affiliate -->
+                <div class="animate-on-scroll fade-up delay-100 group">
+                    <div class="service-card h-full bg-white rounded-2xl p-8 border border-gray-100 hover:border-pink-200 shadow-sm hover:shadow-xl transition-all duration-500 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-500/5 to-transparent rounded-bl-full transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-none"></div>
+                        <div class="relative">
+                            <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-pink-500/20 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                                <i class="fab fa-tiktok text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark-900 mb-3 group-hover:text-pink-600 transition-colors">TikTok Affiliate & Marketing</h3>
+                            <p class="text-gray-500 leading-relaxed mb-4">Manfaatkan kekuatan TikTok untuk meningkatkan penjualan melalui strategi affiliate dan content marketing.</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-pink-500 mr-2"></i>
+                                    TikTok Shop Affiliate
+                                </li>
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-pink-500 mr-2"></i>
+                                    Content Creator Management
+                                </li>
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-pink-500 mr-2"></i>
+                                    TikTok Ads & Live Shopping
+                                </li>
+                            </ul>
+                            <a href="#kontak" class="inline-flex items-center text-pink-600 font-semibold text-sm group-hover:text-pink-700">
+                                Pelajari Selengkapnya
+                                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 5: SEO & Digital Branding -->
+                <div class="animate-on-scroll fade-up delay-200 group">
+                    <div class="service-card h-full bg-white rounded-2xl p-8 border border-gray-100 hover:border-emerald-200 shadow-sm hover:shadow-xl transition-all duration-500 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-500/5 to-transparent rounded-bl-full transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-none"></div>
+                        <div class="relative">
+                            <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/20 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                                <i class="fas fa-search-dollar text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark-900 mb-3 group-hover:text-emerald-600 transition-colors">SEO & Digital Branding</h3>
+                            <p class="text-gray-500 leading-relaxed mb-4">Tingkatkan visibilitas website di mesin pencari dan bangun citra brand yang kuat di ranah digital.</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-emerald-500 mr-2"></i>
+                                    On-Page & Off-Page SEO
+                                </li>
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-emerald-500 mr-2"></i>
+                                    Social Media Branding
+                                </li>
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-emerald-500 mr-2"></i>
+                                    Content Strategy
+                                </li>
+                            </ul>
+                            <a href="#kontak" class="inline-flex items-center text-emerald-600 font-semibold text-sm group-hover:text-emerald-700">
+                                Pelajari Selengkapnya
+                                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 6: Pelatihan -->
+                <div class="animate-on-scroll fade-up delay-300 group">
+                    <div class="service-card h-full bg-white rounded-2xl p-8 border border-gray-100 hover:border-amber-200 shadow-sm hover:shadow-xl transition-all duration-500 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-500/5 to-transparent rounded-bl-full transition-all duration-500 group-hover:w-full group-hover:h-full group-hover:rounded-none"></div>
+                        <div class="relative">
+                            <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-amber-500/20 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                                <i class="fas fa-chalkboard-teacher text-2xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark-900 mb-3 group-hover:text-amber-600 transition-colors">Pelatihan Digital Marketing</h3>
+                            <p class="text-gray-500 leading-relaxed mb-4">Program pelatihan komprehensif untuk individu dan tim agar menguasai strategi digital marketing terkini.</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-amber-500 mr-2"></i>
+                                    Workshop & Bootcamp
+                                </li>
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-amber-500 mr-2"></i>
+                                    Sertifikasi BNSP
+                                </li>
+                                <li class="flex items-center text-sm text-gray-600">
+                                    <i class="fas fa-check-circle text-amber-500 mr-2"></i>
+                                    Private Mentoring
+                                </li>
+                            </ul>
+                            <a href="#kontak" class="inline-flex items-center text-amber-600 font-semibold text-sm group-hover:text-amber-700">
+                                Pelajari Selengkapnya
+                                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- TENTANG KAMI / ABOUT SECTION -->
+    <!-- ============================================ -->
+    <section id="tentang" class="py-20 lg:py-32 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Image / Visual Side -->
+                <div class="animate-on-scroll fade-right">
+                    <div class="relative">
+                        <!-- Main Image Placeholder -->
+                        <div class="w-full aspect-[4/3] bg-gradient-to-br from-primary-600 via-primary-700 to-dark-900 rounded-3xl shadow-2xl overflow-hidden relative">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fas fa-rocket text-6xl text-white/20 mb-4"></i>
+                                    <p class="text-white/30 font-semibold text-lg">Tim DIGMAR</p>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-dark-900/50 to-transparent"></div>
+                        </div>
+
+                        <!-- Experience Badge -->
+                        <div class="absolute -bottom-6 -right-6 sm:right-8 bg-white rounded-2xl shadow-xl p-6 border border-gray-100">
+                            <div class="text-center">
+                                <span class="block text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-500 counter" data-target="5">0</span>
+                                <span class="block text-sm text-gray-500 font-medium mt-1">Tahun<br>Pengalaman</span>
+                            </div>
+                        </div>
+
+                        <!-- Decorative element -->
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-accent-500/10 rounded-2xl -z-10"></div>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div>
+                    <span class="animate-on-scroll fade-up inline-block px-4 py-1.5 bg-primary-50 text-primary-700 text-sm font-semibold rounded-full mb-4">
+                        TENTANG KAMI
+                    </span>
+                    <h2 class="animate-on-scroll fade-up delay-100 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dark-900 leading-tight">
+                        Partner Terpercaya untuk
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-700"> Pertumbuhan Digital</span> Anda
+                    </h2>
+                    <p class="animate-on-scroll fade-up delay-200 mt-6 text-lg text-gray-500 leading-relaxed">
+                        <strong class="text-dark-900">DIGMAR</strong> adalah agensi digital marketing & affiliate terpercaya yang berdedikasi membantu bisnis Indonesia berkembang di era digital. Dengan tim profesional dan berpengalaman, kami menggabungkan strategi kreatif dengan pendekatan berbasis data untuk menghasilkan pertumbuhan yang nyata.
+                    </p>
+                    <p class="animate-on-scroll fade-up delay-300 mt-4 text-gray-500 leading-relaxed">
+                        Mulai dari pembuatan website, pengelolaan iklan digital, hingga strategi affiliate marketing — kami hadir sebagai mitra strategis yang memahami kebutuhan pasar Indonesia.
+                    </p>
+
+                    <!-- Values -->
+                    <div class="animate-on-scroll fade-up delay-400 mt-8 grid grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-primary-50 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-bullseye text-primary-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-dark-900">Berorientasi Hasil</h4>
+                                <p class="text-sm text-gray-500">Fokus pada ROI & konversi</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-accent-50 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-handshake text-accent-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-dark-900">Transparansi</h4>
+                                <p class="text-sm text-gray-500">Laporan terukur & jelas</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-emerald-50 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-lightbulb text-emerald-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-dark-900">Inovasi</h4>
+                                <p class="text-sm text-gray-500">Strategi terkini & kreatif</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-pink-50 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-heart text-pink-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-dark-900">Dedikasi</h4>
+                                <p class="text-sm text-gray-500">Komitmen penuh untuk klien</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Counter -->
+            <div class="mt-20 lg:mt-28">
+                <div class="bg-gradient-to-r from-primary-700 via-primary-800 to-dark-900 rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden">
+                    <div class="absolute inset-0 hero-grid-pattern opacity-5"></div>
+                    <div class="relative grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                        <div class="text-center animate-on-scroll fade-up">
+                            <div class="text-4xl lg:text-5xl font-extrabold text-white mb-2">
+                                <span class="counter" data-target="200">0</span>+
+                            </div>
+                            <p class="text-white/60 font-medium">Klien Puas</p>
+                        </div>
+                        <div class="text-center animate-on-scroll fade-up delay-100">
+                            <div class="text-4xl lg:text-5xl font-extrabold text-white mb-2">
+                                <span class="counter" data-target="500">0</span>+
+                            </div>
+                            <p class="text-white/60 font-medium">Proyek Selesai</p>
+                        </div>
+                        <div class="text-center animate-on-scroll fade-up delay-200">
+                            <div class="text-4xl lg:text-5xl font-extrabold text-white mb-2">
+                                <span class="counter" data-target="50">0</span>+
+                            </div>
+                            <p class="text-white/60 font-medium">Tim Profesional</p>
+                        </div>
+                        <div class="text-center animate-on-scroll fade-up delay-300">
+                            <div class="text-4xl lg:text-5xl font-extrabold text-white mb-2">
+                                <span class="counter" data-target="98">0</span>%
+                            </div>
+                            <p class="text-white/60 font-medium">Tingkat Kepuasan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- KEUNGGULAN / WHY CHOOSE US -->
+    <!-- ============================================ -->
+    <section class="py-20 lg:py-32 bg-gray-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="animate-on-scroll fade-up inline-block px-4 py-1.5 bg-accent-100 text-accent-700 text-sm font-semibold rounded-full mb-4">
+                    KEUNGGULAN KAMI
+                </span>
+                <h2 class="animate-on-scroll fade-up delay-100 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dark-900 leading-tight">
+                    Mengapa Memilih
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-500 to-accent-600"> DIGMAR?</span>
+                </h2>
+                <p class="animate-on-scroll fade-up delay-200 mt-4 text-lg text-gray-500">
+                    Kami memberikan yang terbaik untuk kesuksesan bisnis digital Anda
+                </p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="animate-on-scroll fade-up delay-100 text-center group">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl flex items-center justify-center mb-6 shadow-lg shadow-primary-500/20 transform group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500">
+                        <i class="fas fa-users text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark-900 mb-2">Tim Profesional</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Tim berpengalaman yang ahli di bidang digital marketing & teknologi</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="animate-on-scroll fade-up delay-200 text-center group">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-3xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/20 transform group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500">
+                        <i class="fas fa-chart-bar text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark-900 mb-2">Hasil Terukur</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Setiap campaign diukur dengan metrik yang jelas dan transparan</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="animate-on-scroll fade-up delay-300 text-center group">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-accent-500 to-orange-600 rounded-3xl flex items-center justify-center mb-6 shadow-lg shadow-accent-500/20 transform group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500">
+                        <i class="fas fa-tags text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark-900 mb-2">Harga Terjangkau</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Paket layanan yang fleksibel dan sesuai dengan budget Anda</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="animate-on-scroll fade-up delay-400 text-center group">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-purple-500 to-purple-700 rounded-3xl flex items-center justify-center mb-6 shadow-lg shadow-purple-500/20 transform group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500">
+                        <i class="fas fa-headset text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark-900 mb-2">Support 24/7</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Tim support yang selalu siap membantu kapan pun Anda butuhkan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PORTFOLIO SECTION (REAL TRACK RECORD FROM PDF) -->
+    <!-- ============================================ -->
+    <section id="portfolio" class="py-20 lg:py-32 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="animate-on-scroll fade-up inline-block px-4 py-1.5 bg-primary-100 text-primary-700 text-sm font-semibold rounded-full mb-4">
+                    BUKTI &amp; PORTOFOLIO KINERJA
+                </span>
+                <h2 class="animate-on-scroll fade-up delay-100 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dark-900 leading-tight">
+                    Hasil Nyata &amp;
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-500"> Rekam Jejak Terverifikasi</span>
+                </h2>
+                <p class="animate-on-scroll fade-up delay-200 mt-4 text-base sm:text-lg text-gray-600">
+                    Bukan sekadar klaim, ini adalah dokumentasi nyata performa SEO, Google Ads, E-Commerce, dan Kampanye Affiliate dari proyek korporat hingga ritel.
+                </p>
+            </div>
+
+            <!-- Portfolio Filter Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
+                <button class="portfolio-filter-btn active px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-primary-600 text-white shadow-md transition-all duration-300" data-filter="all">
+                    Semua Portofolio
+                </button>
+                <button class="portfolio-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all duration-300" data-filter="seo">
+                    SEO &amp; Traffic Organik
+                </button>
+                <button class="portfolio-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all duration-300" data-filter="ads">
+                    Google &amp; Meta Ads
+                </button>
+                <button class="portfolio-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all duration-300" data-filter="marketplace">
+                    Marketplace &amp; E-Commerce
+                </button>
+                <button class="portfolio-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all duration-300" data-filter="affiliate">
+                    Affiliate Marketing
+                </button>
+                <button class="portfolio-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all duration-300" data-filter="certification">
+                    Sertifikasi Resmi
+                </button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Item 1: BFI Finance SEO -->
+                <div class="portfolio-item group bg-white rounded-3xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between" data-category="seo">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 font-semibold text-xs rounded-full">SEO &amp; Growth</span>
+                            <span class="text-xs font-bold text-emerald-600 flex items-center">
+                                <i class="fas fa-check-circle mr-1"></i> Terverifikasi GSC &amp; Semrush
+                            </span>
+                        </div>
+                        <div class="h-44 rounded-2xl bg-gradient-to-br from-blue-900 via-indigo-950 to-slate-900 p-5 text-white flex flex-col justify-between relative overflow-hidden mb-5">
+                            <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl pointer-events-none"></div>
+                            <div>
+                                <span class="text-xs uppercase tracking-wider text-blue-300 font-bold">PT BFI Finance Indonesia Tbk</span>
+                                <h4 class="text-xl font-extrabold text-white mt-1">1.790.566 Trafik Organik / Bln</h4>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-white/10 text-xs">
+                                <div><span class="text-white/60 block">GSC Klik:</span><span class="font-bold text-accent-400">1,79 Juta Klik</span></div>
+                                <div><span class="text-white/60 block">GSC Impresi:</span><span class="font-bold text-white">70,9 Juta</span></div>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-900 mb-2">Peringkat #1 Google Organik Nasional</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Optimasi SEO menyeluruh menghasilkan peringkat #1 Google pada keyword berdaya saing tinggi: <em>'pembiayaan bpkb mobil'</em>, <em>'pinjaman bpkb motor'</em>, dan <em>'pembiayaan sertifikat rumah'</em>.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                        <span><i class="fas fa-chart-line text-blue-600 mr-1.5"></i> 188.877 Total Keyword Semrush</span>
+                        <span class="font-semibold text-primary-600">6.933 Top 3</span>
+                    </div>
+                </div>
+
+                <!-- Item 2: PT Beta Pramesti Google Ads -->
+                <div class="portfolio-item group bg-white rounded-3xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl hover:border-accent-200 transition-all duration-300 flex flex-col justify-between" data-category="ads">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">Google Ads &amp; CRM</span>
+                            <span class="text-xs font-bold text-emerald-600 flex items-center">
+                                <i class="fas fa-trophy mr-1 text-accent-500"></i> Winning Campaign
+                            </span>
+                        </div>
+                        <div class="h-44 rounded-2xl bg-gradient-to-br from-amber-600 via-orange-600 to-amber-900 p-5 text-white flex flex-col justify-between relative overflow-hidden mb-5">
+                            <div class="absolute -right-4 -bottom-4 w-28 h-28 bg-white/20 rounded-full blur-xl pointer-events-none"></div>
+                            <div>
+                                <span class="text-xs uppercase tracking-wider text-amber-200 font-bold">PT Beta Pramesti Asia (water.id)</span>
+                                <h4 class="text-xl font-extrabold text-white mt-1">Rp19,909 Miliar Proyeksi Revenue</h4>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-white/20 text-xs">
+                                <div><span class="text-white/80 block">Biaya Iklan:</span><span class="font-bold text-white">Rp10,5 Juta</span></div>
+                                <div><span class="text-white/80 block">HubSpot Deals:</span><span class="font-bold text-yellow-200">301 Deals B2B</span></div>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-900 mb-2">Campaign B2B &amp; Lead Generation Efektif</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Pengelolaan Google Ads presisi tinggi untuk sektor konstruksi &amp; chemical industri dengan CPC efisien Rp7.030, menghasilkan ratusan deals enterprise yang terintegrasi di HubSpot CRM.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                        <span><i class="fab fa-google text-amber-500 mr-1.5"></i> 18.000 Impresi Tertarget</span>
+                        <span class="font-semibold text-emerald-600">ROI Eksponensial</span>
+                    </div>
+                </div>
+
+                <!-- Item 3: Marketplace Shopee -->
+                <div class="portfolio-item group bg-white rounded-3xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl hover:border-orange-200 transition-all duration-300 flex flex-col justify-between" data-category="marketplace">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-orange-100 text-orange-700 font-semibold text-xs rounded-full">Shopee Marketplace</span>
+                            <span class="text-xs font-bold text-primary-600 flex items-center">
+                                <i class="fas fa-shopping-bag mr-1"></i> Penjualan Ritel
+                            </span>
+                        </div>
+                        <div class="h-44 rounded-2xl bg-gradient-to-br from-orange-500 via-red-500 to-rose-700 p-5 text-white flex flex-col justify-between relative overflow-hidden mb-5">
+                            <div class="absolute -right-4 -bottom-4 w-28 h-28 bg-white/20 rounded-full blur-xl pointer-events-none"></div>
+                            <div>
+                                <span class="text-xs uppercase tracking-wider text-orange-200 font-bold">Jayco Official Store</span>
+                                <h4 class="text-xl font-extrabold text-white mt-1">Rp2,35 Miliar Penjualan Shopee</h4>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-white/20 text-xs">
+                                <div><span class="text-white/80 block">Pesanan Selesai:</span><span class="font-bold text-white">1.809 Pesanan</span></div>
+                                <div><span class="text-white/80 block">Rekor 1 Bulan:</span><span class="font-bold text-yellow-200">Rp275,81 Juta</span></div>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-900 mb-2">Scale-Up Toko Online &amp; Konversi Penjualan</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Pengelolaan ekosistem marketplace komprehensif mulai dari optimasi etalase, penetapan harga psikologis, flash sale, voucher beruntun, serta penanganan 0 poin penalti operasional.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                        <span><i class="fas fa-box text-orange-500 mr-1.5"></i> 22.563 Pengunjung / Bln</span>
+                        <span class="font-semibold text-orange-600">Zero Penalty Point</span>
+                    </div>
+                </div>
+
+                <!-- Item 4: Winning Shopee Ads ROAS 84.42x -->
+                <div class="portfolio-item group bg-white rounded-3xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl hover:border-emerald-200 transition-all duration-300 flex flex-col justify-between" data-category="marketplace ads">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">High ROAS Ads</span>
+                            <span class="text-xs font-bold text-emerald-600 flex items-center">
+                                <i class="fas fa-bolt mr-1 text-emerald-500"></i> ROAS 84,42x
+                            </span>
+                        </div>
+                        <div class="h-44 rounded-2xl bg-gradient-to-br from-emerald-600 via-teal-700 to-slate-900 p-5 text-white flex flex-col justify-between relative overflow-hidden mb-5">
+                            <div class="absolute -right-4 -bottom-4 w-28 h-28 bg-white/20 rounded-full blur-xl pointer-events-none"></div>
+                            <div>
+                                <span class="text-xs uppercase tracking-wider text-emerald-200 font-bold">Campaign UPVC Glassy</span>
+                                <h4 class="text-xl font-extrabold text-white mt-1">Biaya Rp55rb → Omzet Rp4,72jt</h4>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-white/20 text-xs">
+                                <div><span class="text-white/80 block">Rata-rata ROAS:</span><span class="font-bold text-accent-400">6,24x - 6,49x</span></div>
+                                <div><span class="text-white/80 block">Impresi Iklan:</span><span class="font-bold text-white">215,5K Impresi</span></div>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-900 mb-2">Shopee Ads Presisi &amp; Efisiensi Maksimal</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Struktur bidding iklan kata kunci terarah dan iklan serupa yang mampu memangkas biaya boncos dan melipatgandakan return modal iklan secara konsisten tiap bulan.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                        <span><i class="fas fa-percentage text-emerald-500 mr-1.5"></i> ROAS Stabil &gt; 6x</span>
+                        <span class="font-semibold text-emerald-600">Anti Boncos</span>
+                    </div>
+                </div>
+
+                <!-- Item 5: Affiliate Marketing -->
+                <div class="portfolio-item group bg-white rounded-3xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl hover:border-pink-200 transition-all duration-300 flex flex-col justify-between" data-category="affiliate">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-pink-100 text-pink-700 font-semibold text-xs rounded-full">Affiliate Strategy</span>
+                            <span class="text-xs font-bold text-pink-600 flex items-center">
+                                <i class="fas fa-hand-holding-usd mr-1"></i> ROI 29,5x
+                            </span>
+                        </div>
+                        <div class="h-44 rounded-2xl bg-gradient-to-br from-pink-600 via-rose-600 to-purple-800 p-5 text-white flex flex-col justify-between relative overflow-hidden mb-5">
+                            <div class="absolute -right-4 -bottom-4 w-28 h-28 bg-white/20 rounded-full blur-xl pointer-events-none"></div>
+                            <div>
+                                <span class="text-xs uppercase tracking-wider text-pink-200 font-bold">Shopee Affiliate Program</span>
+                                <h4 class="text-xl font-extrabold text-white mt-1">Rp76,8 Juta Penjualan Affiliate</h4>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-white/20 text-xs">
+                                <div><span class="text-white/80 block">Trafik Klik:</span><span class="font-bold text-white">11.000+ Klik</span></div>
+                                <div><span class="text-white/80 block">ROI Kampanye:</span><span class="font-bold text-accent-300">26,3x s/d 29,5x</span></div>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-900 mb-2">Jaringan Affiliate Kolaboratif</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Membangun ekosistem creator affiliate melalui penawaran komisi kompetitif, pemilihan produk winning, dan pelacakan atribusi link otomatis untuk mendongkrak penjualan tanpa biaya iklan upfront yang besar.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                        <span><i class="fas fa-users text-pink-500 mr-1.5"></i> Pembeli Baru Organik</span>
+                        <span class="font-semibold text-pink-600">Passive Sales Channel</span>
+                    </div>
+                </div>
+
+                <!-- Item 6: TikTok Shop & Tokopedia -->
+                <div class="portfolio-item group bg-white rounded-3xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl hover:border-slate-300 transition-all duration-300 flex flex-col justify-between" data-category="marketplace">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-800 font-semibold text-xs rounded-full">TikTok &amp; Tokopedia</span>
+                            <span class="text-xs font-bold text-emerald-600 flex items-center">
+                                <i class="fas fa-arrow-up mr-1"></i> +334,54% Growth
+                            </span>
+                        </div>
+                        <div class="h-44 rounded-2xl bg-gradient-to-br from-slate-900 via-gray-800 to-black p-5 text-white flex flex-col justify-between relative overflow-hidden mb-5">
+                            <div class="absolute -right-4 -bottom-4 w-28 h-28 bg-emerald-500/20 rounded-full blur-xl pointer-events-none"></div>
+                            <div>
+                                <span class="text-xs uppercase tracking-wider text-gray-300 font-bold">Multi-Channel Ritel</span>
+                                <h4 class="text-xl font-extrabold text-white mt-1">GMV Rp119,7 Juta (4 Bulan)</h4>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-white/20 text-xs">
+                                <div><span class="text-white/80 block">Pertumbuhan:</span><span class="font-bold text-emerald-400">+334,54%</span></div>
+                                <div><span class="text-white/80 block">Pesanan Siap Kirim:</span><span class="font-bold text-white">1.764 Pesanan</span></div>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-900 mb-2">Ekspansi Kanal Penjualan Multi-Platform</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Sinkronisasi stok, flash sale berkala, live stream shopping, dan kampanye video interaktif di Tokopedia &amp; TikTok Shop yang sukses melonjakkan omzet lebih dari 3 kali lipat.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                        <span><i class="fab fa-tiktok text-slate-900 mr-1.5"></i> Multi-channel Sync</span>
+                        <span class="font-semibold text-emerald-600">High Growth</span>
+                    </div>
+                </div>
+
+                <!-- Item 7: Meta Ads & Brand Social Media -->
+                <div class="portfolio-item group bg-white rounded-3xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl hover:border-blue-200 transition-all duration-300 flex flex-col justify-between" data-category="ads">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 font-semibold text-xs rounded-full">Meta Ads &amp; Social</span>
+                            <span class="text-xs font-bold text-blue-600 flex items-center">
+                                <i class="fab fa-meta mr-1"></i> Facebook &amp; IG Ads
+                            </span>
+                        </div>
+                        <div class="h-44 rounded-2xl bg-gradient-to-br from-blue-700 via-indigo-800 to-purple-900 p-5 text-white flex flex-col justify-between relative overflow-hidden mb-5">
+                            <div class="absolute -right-4 -bottom-4 w-28 h-28 bg-white/20 rounded-full blur-xl pointer-events-none"></div>
+                            <div>
+                                <span class="text-xs uppercase tracking-wider text-blue-200 font-bold">PT Global Sukses Digital (DOSS)</span>
+                                <h4 class="text-xl font-extrabold text-white mt-1">ROAS Meta Ads Mencapai 12,03x</h4>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-white/20 text-xs">
+                                <div><span class="text-white/80 block">Nilai Pembelian:</span><span class="font-bold text-accent-300">Rp134,1 Juta</span></div>
+                                <div><span class="text-white/80 block">Akun Dikelola:</span><span class="font-bold text-white">136K+ Followers</span></div>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-900 mb-2">Penetrasi Pasar Ritel Kamera &amp; Komunitas</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Pengelolaan paid traffic Meta Ads untuk DOSS Camera &amp; Gadget, Joy Magazine, dan brand BAE Orbit dengan strategi retargeting presisi, lead WhatsApp terstruktur, dan pelaporan berkala.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                        <span><i class="fab fa-instagram text-pink-500 mr-1.5"></i> Pixel &amp; CAPI Tracking</span>
+                        <span class="font-semibold text-blue-600">Omnichannel Ads</span>
+                    </div>
+                </div>
+
+                <!-- Item 8: Sertifikasi Resmi -->
+                <div class="portfolio-item group bg-white rounded-3xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl hover:border-yellow-200 transition-all duration-300 flex flex-col justify-between sm:col-span-2 lg:col-span-2" data-category="certification">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 font-semibold text-xs rounded-full">Sertifikasi Global</span>
+                            <span class="text-xs font-bold text-emerald-600 flex items-center">
+                                <i class="fas fa-certificate mr-1 text-accent-500"></i> Standar Internasional
+                            </span>
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-4 mb-5">
+                            <div class="bg-gradient-to-br from-slate-900 to-blue-950 p-4 rounded-2xl text-white">
+                                <i class="fab fa-google text-2xl text-accent-400 mb-2"></i>
+                                <h5 class="font-bold text-sm">Google Skillshop</h5>
+                                <ul class="text-xs text-white/70 space-y-1 mt-2">
+                                    <li>• AI-Powered Performance Ads</li>
+                                    <li>• Campaign Manager 360</li>
+                                    <li>• GA4 Data &amp; Measurement</li>
+                                    <li>• Google Ads Display</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gradient-to-br from-slate-900 to-orange-950 p-4 rounded-2xl text-white">
+                                <i class="fas fa-search text-2xl text-orange-400 mb-2"></i>
+                                <h5 class="font-bold text-sm">Semrush Academy</h5>
+                                <ul class="text-xs text-white/70 space-y-1 mt-2">
+                                    <li>• Keyword Research Essentials</li>
+                                    <li>• Competitive Analysis</li>
+                                    <li>• Technical SEO Auditing</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gradient-to-br from-slate-900 to-red-950 p-4 rounded-2xl text-white">
+                                <i class="fab fa-hubspot text-2xl text-rose-400 mb-2"></i>
+                                <h5 class="font-bold text-sm">HubSpot Academy</h5>
+                                <ul class="text-xs text-white/70 space-y-1 mt-2">
+                                    <li>• Marketing Hub Software</li>
+                                    <li>• CRM &amp; Lead Management</li>
+                                    <li>• Inbound Strategy</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold text-dark-900 mb-2">Keahlian Teruji dengan Akreditasi Resmi</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Setiap strategi yang kami jalankan didasari oleh metodologi resmi platform teknologi periklanan dunia (Google, Semrush, HubSpot) guna memastikan keamanan akun, kepatuhan kebijakan, dan efektivitas anggaran Anda.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                        <span><i class="fas fa-shield-alt text-emerald-500 mr-1.5"></i> Akreditasi Masih Berlaku Aktif</span>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20ingin%20melihat%20detail%20portofolio%20Anda" target="_blank" class="font-bold text-primary-600 hover:text-primary-700 flex items-center">
+                            Konsultasikan Proyek Anda <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- TESTIMONI SECTION -->
+    <!-- ============================================ -->
+    <section id="testimoni" class="py-20 lg:py-32 bg-gradient-to-br from-dark-900 via-primary-900 to-dark-900 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute inset-0 hero-grid-pattern opacity-5"></div>
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="animate-on-scroll fade-up inline-block px-4 py-1.5 bg-white/10 text-white text-sm font-semibold rounded-full mb-4 border border-white/10">
+                    TESTIMONI
+                </span>
+                <h2 class="animate-on-scroll fade-up delay-100 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
+                    Apa Kata
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-500"> Klien Kami?</span>
+                </h2>
+                <p class="animate-on-scroll fade-up delay-200 mt-4 text-lg text-white/60">
+                    Dengarkan pengalaman langsung dari klien yang telah merasakan hasilnya
+                </p>
+            </div>
+
+            <!-- Testimonial Slider -->
+            <div class="animate-on-scroll fade-up delay-300">
+                <div class="testimonial-slider relative">
+                    <div class="testimonial-track overflow-hidden">
+                        <div class="testimonial-slides flex transition-transform duration-700 ease-in-out">
+
+                            <!-- Testimonial 1 -->
+                            <div class="testimonial-slide w-full flex-shrink-0 px-4">
+                                <div class="max-w-3xl mx-auto bg-white/5 backdrop-blur-xl rounded-3xl p-8 lg:p-12 border border-white/10">
+                                    <div class="flex items-center mb-6">
+                                        <div class="flex text-accent-400 space-x-1">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <blockquote class="text-white/90 text-lg lg:text-xl leading-relaxed italic mb-8">
+                                        "Sejak bekerja sama dengan DIGMAR, penjualan online kami meningkat hingga 300%. Tim mereka sangat profesional dan selalu memberikan laporan yang detail. Sangat recommended!"
+                                    </blockquote>
+                                    <div class="flex items-center">
+                                        <div class="w-14 h-14 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center mr-4">
+                                            <span class="text-white font-bold text-xl">AS</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-white font-semibold text-lg">Ahmad Surya</p>
+                                            <p class="text-white/50">CEO, Surya Fashion Group</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 2 -->
+                            <div class="testimonial-slide w-full flex-shrink-0 px-4">
+                                <div class="max-w-3xl mx-auto bg-white/5 backdrop-blur-xl rounded-3xl p-8 lg:p-12 border border-white/10">
+                                    <div class="flex items-center mb-6">
+                                        <div class="flex text-accent-400 space-x-1">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <blockquote class="text-white/90 text-lg lg:text-xl leading-relaxed italic mb-8">
+                                        "DIGMAR membantu kami membangun strategi TikTok affiliate yang luar biasa. Dalam 3 bulan pertama, kami berhasil mendapatkan lebih dari 1 juta views dan peningkatan penjualan 150%."
+                                    </blockquote>
+                                    <div class="flex items-center">
+                                        <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
+                                            <span class="text-white font-bold text-xl">DP</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-white font-semibold text-lg">Dewi Pramesti</p>
+                                            <p class="text-white/50">Founder, GlowSkin Indonesia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 3 -->
+                            <div class="testimonial-slide w-full flex-shrink-0 px-4">
+                                <div class="max-w-3xl mx-auto bg-white/5 backdrop-blur-xl rounded-3xl p-8 lg:p-12 border border-white/10">
+                                    <div class="flex items-center mb-6">
+                                        <div class="flex text-accent-400 space-x-1">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <blockquote class="text-white/90 text-lg lg:text-xl leading-relaxed italic mb-8">
+                                        "Website yang dibuat oleh DIGMAR sangat profesional dan responsif. Google Ads yang mereka kelola juga memberikan ROI yang fantastis. Support mereka juga sangat responsif, 24/7!"
+                                    </blockquote>
+                                    <div class="flex items-center">
+                                        <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mr-4">
+                                            <span class="text-white font-bold text-xl">BW</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-white font-semibold text-lg">Budi Wijaya</p>
+                                            <p class="text-white/50">Marketing Director, Wijaya Property</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 4 -->
+                            <div class="testimonial-slide w-full flex-shrink-0 px-4">
+                                <div class="max-w-3xl mx-auto bg-white/5 backdrop-blur-xl rounded-3xl p-8 lg:p-12 border border-white/10">
+                                    <div class="flex items-center mb-6">
+                                        <div class="flex text-accent-400 space-x-1">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <blockquote class="text-white/90 text-lg lg:text-xl leading-relaxed italic mb-8">
+                                        "Pelatihan digital marketing dari DIGMAR sangat komprehensif. Tim kami sekarang sudah bisa mengelola campaign sendiri dengan lebih percaya diri. Terima kasih DIGMAR!"
+                                    </blockquote>
+                                    <div class="flex items-center">
+                                        <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-500 rounded-full flex items-center justify-center mr-4">
+                                            <span class="text-white font-bold text-xl">SR</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-white font-semibold text-lg">Sari Rahayu</p>
+                                            <p class="text-white/50">HRD Manager, PT Nusantara Jaya</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Slider Controls -->
+                    <div class="flex items-center justify-center mt-10 space-x-6">
+                        <button id="testimonial-prev" class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-all duration-300 border border-white/10 hover:border-white/30">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div id="testimonial-dots" class="flex space-x-3">
+                            <!-- Dots generated by JS -->
+                        </div>
+                        <button id="testimonial-next" class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-all duration-300 border border-white/10 hover:border-white/30">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CTA SECTION -->
+    <!-- ============================================ -->
+    <section id="kontak" class="py-20 lg:py-32 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-accent-50"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center">
+                <span class="animate-on-scroll fade-up inline-block px-4 py-1.5 bg-primary-50 text-primary-700 text-sm font-semibold rounded-full mb-4">
+                    MULAI SEKARANG
+                </span>
+                <h2 class="animate-on-scroll fade-up delay-100 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dark-900 leading-tight">
+                    Siap Mengembangkan
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-500"> Bisnis Anda?</span>
+                </h2>
+                <p class="animate-on-scroll fade-up delay-200 mt-6 text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                    Konsultasikan kebutuhan digital marketing bisnis Anda secara GRATIS. Tim kami siap membantu Anda merancang strategi yang tepat dan efektif.
+                </p>
+
+                <div class="animate-on-scroll fade-up delay-300 mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20ingin%20konsultasi%20gratis%20untuk%20bisnis%20saya"
+                       target="_blank"
+                       class="group inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-green-500 to-green-600 text-white font-bold text-lg rounded-2xl hover:shadow-2xl hover:shadow-green-500/30 transform hover:-translate-y-1 transition-all duration-300">
+                        <i class="fab fa-whatsapp mr-3 text-2xl"></i>
+                        Chat via WhatsApp (0877-7632-9910)
+                        <i class="fas fa-arrow-right ml-3 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="mailto:hello@digmar.id"
+                       class="inline-flex items-center justify-center px-10 py-5 bg-white border-2 border-gray-200 text-dark-900 font-bold text-lg rounded-2xl hover:border-primary-300 hover:shadow-lg transition-all duration-300">
+                        <i class="fas fa-envelope mr-3 text-primary-600"></i>
+                        Email Kami
+                    </a>
+                </div>
+
+                <!-- Trust indicators -->
+                <div class="animate-on-scroll fade-up delay-400 mt-12 flex flex-wrap items-center justify-center gap-8 text-gray-400">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-shield-alt text-primary-500"></i>
+                        <span class="text-sm font-medium">Konsultasi Gratis</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-clock text-primary-500"></i>
+                        <span class="text-sm font-medium">Respon Cepat</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-handshake text-primary-500"></i>
+                        <span class="text-sm font-medium">Tanpa Komitmen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================ -->
+    <footer class="bg-dark-900 text-white relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-500/50 to-transparent"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 lg:pt-20 pb-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
+
+                <!-- Company Info -->
+                <div class="lg:col-span-1">
+                    <a href="#beranda" class="inline-block mb-4">
+                        <img src="images/logo-white.svg" alt="DIGMAR Logo" class="h-11 w-auto">
+                    </a>
+                    <p class="text-white/50 leading-relaxed mb-6">
+                        Solusi Digital Marketing &amp; Affiliate Terpercaya untuk pertumbuhan bisnis Anda di era digital.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 bg-white/5 hover:bg-primary-600 rounded-xl flex items-center justify-center text-white/50 hover:text-white transition-all duration-300 border border-white/5 hover:border-primary-500">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 rounded-xl flex items-center justify-center text-white/50 hover:text-white transition-all duration-300 border border-white/5 hover:border-pink-400">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 hover:bg-dark-800 rounded-xl flex items-center justify-center text-white/50 hover:text-white transition-all duration-300 border border-white/5 hover:border-white/20">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 hover:bg-blue-600 rounded-xl flex items-center justify-center text-white/50 hover:text-white transition-all duration-300 border border-white/5 hover:border-blue-400">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 hover:bg-red-600 rounded-xl flex items-center justify-center text-white/50 hover:text-white transition-all duration-300 border border-white/5 hover:border-red-400">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-6">Navigasi</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#beranda" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Beranda</a></li>
+                        <li><a href="#layanan" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Layanan</a></li>
+                        <li><a href="#tentang" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Tentang Kami</a></li>
+                        <li><a href="#portfolio" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Portfolio</a></li>
+                        <li><a href="#testimoni" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Testimoni</a></li>
+                        <li><a href="#kontak" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Kontak</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Links -->
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-6">Layanan</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#layanan" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Pembuatan Website</a></li>
+                        <li><a href="#layanan" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Google Ads</a></li>
+                        <li><a href="#layanan" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Meta Ads</a></li>
+                        <li><a href="#layanan" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>TikTok Affiliate</a></li>
+                        <li><a href="#layanan" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>SEO &amp; Branding</a></li>
+                        <li><a href="#layanan" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Pelatihan</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-6">Hubungi Kami</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-map-marker-alt text-primary-400"></i>
+                            </div>
+                            <div>
+                                <p class="text-white/70 text-sm leading-relaxed">
+                                    Jl. mahoni raya, poris plawat tangerang, banten
+                                </p>
+                            </div>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-primary-400"></i>
+                            </div>
+                            <a href="mailto:hello@digmar.id" class="text-white/50 hover:text-accent-400 transition-colors text-sm">hello@digmar.id</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone-alt text-primary-400"></i>
+                            </div>
+                            <a href="tel:+6287776329910" class="text-white/50 hover:text-accent-400 transition-colors text-sm">+62 877-7632-9910</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-whatsapp text-green-400"></i>
+                            </div>
+                            <a href="https://wa.me/6287776329910" target="_blank" class="text-white/70 hover:text-accent-400 transition-colors text-sm font-semibold">0877-7632-9910 (WhatsApp)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-white/30 text-sm">
+                    &copy; 2026 <span class="text-white/50">DIGMAR</span> (Jasa Digmar Affiliate). All rights reserved.
+                </p>
+                <div class="flex items-center space-x-6 text-sm text-white/30">
+                    <a href="#" class="hover:text-white/60 transition-colors">Kebijakan Privasi</a>
+                    <a href="#" class="hover:text-white/60 transition-colors">Syarat &amp; Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <!-- ============================================ -->
+    <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20layanan%20Anda"
+       target="_blank"
+       id="whatsapp-float"
+       class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/30 hover:shadow-green-500/50 transform hover:scale-110 transition-all duration-300 group"
+       aria-label="Chat WhatsApp">
+        <i class="fab fa-whatsapp text-white text-3xl"></i>
+        <!-- Tooltip -->
+        <span class="absolute right-20 bg-white text-dark-900 text-sm font-semibold px-4 py-2 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+            Chat 0877-7632-9910
+        </span>
+        <!-- Pulse Ring -->
+        <span class="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-20"></span>
+    </a>
+
+    <!-- ============================================ -->
+    <!-- BACK TO TOP BUTTON -->
+    <!-- ============================================ -->
+    <button id="back-to-top"
+            class="fixed bottom-6 left-6 z-50 w-12 h-12 bg-primary-700 text-white rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transform translate-y-4 transition-all duration-500 hover:bg-primary-600 hover:-translate-y-1"
+            aria-label="Kembali ke atas">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+    <defs>
+        <linearGradient id="iconBg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3b82f6" />
+            <stop offset="100%" stop-color="#1e40af" />
+        </linearGradient>
+        <linearGradient id="iconAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fbbf24" />
+            <stop offset="100%" stop-color="#f59e0b" />
+        </linearGradient>
+    </defs>
+    <rect width="64" height="64" rx="16" fill="url(#iconBg)" />
+    <!-- Monogram D outline -->
+    <path d="M18 16 H32 C41 16 46 22 46 30 C46 38 41 44 32 44 H18 V16 Z" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.3" />
+    <!-- Dynamic Growth Arrow -->
+    <path d="M20 42 L31 31 L37 36 L47 21" fill="none" stroke="url(#iconAccent)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+    <polygon points="47,21 40,21 47,28" fill="#f59e0b" />
+    <circle cx="31" cy="31" r="3" fill="#ffffff" />
+    <circle cx="37" cy="36" r="3" fill="#ffffff" />
+</svg>

@@ -1,0 +1,507 @@
+/* ============================================ */
+/* BASE & RESET                                 */
+/* ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Selection color */
+::selection {
+    background: #3b82f6;
+    color: white;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e40af;
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3b82f6;
+}
+
+/* ============================================ */
+/* NAVBAR                                        */
+/* ============================================ */
+
+#navbar {
+    background: transparent;
+}
+
+#navbar.scrolled {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Nav links default (transparent state) */
+.nav-link {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hamburger Menu */
+.hamburger-lines {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.hamburger-lines .line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 999px;
+    position: absolute;
+    transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.line-1 {
+    top: 6px;
+}
+
+.line-2 {
+    top: 11px;
+}
+
+.line-3 {
+    top: 16px;
+}
+
+/* Hamburger active state */
+.hamburger-active .line-1 {
+    top: 11px;
+    transform: rotate(45deg);
+}
+
+.hamburger-active .line-2 {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.hamburger-active .line-3 {
+    top: 11px;
+    transform: rotate(-45deg);
+}
+
+/* Mobile menu */
+.mobile-menu-hidden {
+    max-height: 0;
+    opacity: 0;
+}
+
+.mobile-menu-visible {
+    max-height: 500px;
+    opacity: 1;
+}
+
+/* ============================================ */
+/* HERO SECTION                                  */
+/* ============================================ */
+
+.hero-bg {
+    background: linear-gradient(135deg,
+        #0f172a 0%,
+        #1e3a8a 30%,
+        #1e40af 50%,
+        #1e3370 70%,
+        #0f172a 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Grid pattern */
+.hero-grid-pattern {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+/* Floating Shapes */
+.floating-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.05;
+    background: linear-gradient(135deg, #3b82f6, #f59e0b);
+}
+
+.shape-1 {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    right: -100px;
+    animation: float1 20s ease-in-out infinite;
+}
+
+.shape-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -80px;
+    left: -80px;
+    animation: float2 25s ease-in-out infinite;
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+
+.shape-3 {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 30%;
+    animation: float3 18s ease-in-out infinite;
+    background: linear-gradient(135deg, #10b981, #3b82f6);
+}
+
+.shape-4 {
+    width: 150px;
+    height: 150px;
+    top: 20%;
+    right: 20%;
+    animation: float1 22s ease-in-out infinite reverse;
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+}
+
+.shape-5 {
+    width: 250px;
+    height: 250px;
+    bottom: 20%;
+    right: 10%;
+    animation: float2 28s ease-in-out infinite reverse;
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+}
+
+@keyframes float1 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    25% { transform: translate(30px, -40px) rotate(90deg) scale(1.1); }
+    50% { transform: translate(-20px, 30px) rotate(180deg) scale(0.9); }
+    75% { transform: translate(40px, 20px) rotate(270deg) scale(1.05); }
+}
+
+@keyframes float2 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(-40px, 30px) rotate(120deg); }
+    66% { transform: translate(30px, -20px) rotate(240deg); }
+}
+
+@keyframes float3 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-30px, -30px) scale(1.2); }
+}
+
+/* Floating cards in hero */
+.floating-card {
+    animation: floatCard 6s ease-in-out infinite;
+}
+
+.floating-card-alt {
+    animation: floatCard 8s ease-in-out infinite reverse;
+}
+
+@keyframes floatCard {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* ============================================ */
+/* SCROLL ANIMATIONS                             */
+/* ============================================ */
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.fade-up {
+    transform: translateY(40px);
+}
+
+.animate-on-scroll.fade-right {
+    transform: translateX(-40px);
+}
+
+.animate-on-scroll.fade-left {
+    transform: translateX(40px);
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Animation delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* ============================================ */
+/* SERVICE CARDS                                 */
+/* ============================================ */
+
+.service-card {
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ============================================ */
+/* TESTIMONIAL SLIDER                            */
+/* ============================================ */
+
+.testimonial-slider {
+    position: relative;
+}
+
+.testimonial-track {
+    overflow: hidden;
+}
+
+.testimonial-slides {
+    display: flex;
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.testimonial-slide {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
+/* Dot indicators */
+.testimonial-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.testimonial-dot.active {
+    background: #f59e0b;
+    width: 32px;
+}
+
+/* ============================================ */
+/* PORTFOLIO HOVER EFFECTS                       */
+/* ============================================ */
+
+#portfolio .group:hover .absolute.inset-0:last-of-type {
+    opacity: 1;
+}
+
+/* ============================================ */
+/* WHATSAPP FLOATING BUTTON                      */
+/* ============================================ */
+
+#whatsapp-float {
+    animation: whatsappBounce 2s infinite;
+}
+
+@keyframes whatsappBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+#whatsapp-float:hover {
+    animation: none;
+    transform: scale(1.1);
+}
+
+/* ============================================ */
+/* BACK TO TOP BUTTON                            */
+/* ============================================ */
+
+#back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* ============================================ */
+/* COUNTER ANIMATION                             */
+/* ============================================ */
+
+.counter {
+    display: inline-block;
+}
+
+/* ============================================ */
+/* GLASSMORPHISM UTILITIES                       */
+/* ============================================ */
+
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-light {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================ */
+/* RESPONSIVE ADJUSTMENTS                        */
+/* ============================================ */
+
+@media (max-width: 1024px) {
+    .floating-shape {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-bg {
+        background: linear-gradient(180deg,
+            #0f172a 0%,
+            #1e40af 50%,
+            #0f172a 100%);
+    }
+
+    /* Smaller floating button on mobile */
+    #whatsapp-float {
+        width: 56px;
+        height: 56px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    #whatsapp-float i {
+        font-size: 24px;
+    }
+
+    #back-to-top {
+        bottom: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Hide tooltip on mobile */
+    #whatsapp-float span:not(.absolute:last-child) {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    /* Reduce section padding on mobile */
+    section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* ============================================ */
+/* MISC UTILITIES                                */
+/* ============================================ */
+
+/* Gradient text utility */
+.gradient-text {
+    background: linear-gradient(135deg, #3b82f6, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Smooth image loading */
+img {
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"] {
+    opacity: 0;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* Focus styles for accessibility */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+    border-radius: 8px;
+}
+
+/* Portfolio Cards transition */
+.portfolio-item {
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.portfolio-item.hidden {
+    display: none !important;
+}
+
+/* Print styles */
+@media print {
+    #navbar,
+    #whatsapp-float,
+    #back-to-top,
+    .floating-shape {
+        display: none !important;
+    }
+
+    body {
+        color: #000;
+        background: #fff;
+    }
+
+    section {
+        page-break-inside: avoid;
+    }
+}
