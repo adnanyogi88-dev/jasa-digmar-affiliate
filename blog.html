@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog & Wawasan Digital Marketing - DIGMAR. Pelajari tips SEO, optimasi Google Ads, strategi Shopee Affiliate, dan teknik scale-up omzet marketplace.">
+    <meta name="keywords" content="blog digital marketing, tips seo, belajar affiliate shopee, panduan google ads, scale up marketplace, artikel digital agency">
+    <title>Blog &amp; Wawasan Digital Marketing — DIGMAR</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1e40af',
+                            800: '#1e3a8a',
+                            900: '#1e3370',
+                        },
+                        accent: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        },
+                        dark: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans text-gray-700 bg-white antialiased">
+
+    <!-- ============================================ -->
+    <!-- NAVBAR -->
+    <!-- ============================================ -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-dark-900/95 backdrop-blur-xl border-b border-white/5 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <img src="images/logo-white.svg" alt="DIGMAR Logo" class="h-10 w-auto transform group-hover:scale-105 transition-transform duration-300">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html#beranda" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">Beranda</a>
+                    <a href="index.html#layanan" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">Layanan</a>
+                    <a href="index.html#tentang" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">Tentang Kami</a>
+                    <a href="index.html#portfolio" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">Portfolio</a>
+                    <a href="index.html#testimoni" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">Testimoni</a>
+                    <a href="blog.html" class="nav-link active px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 text-accent-400 bg-white/10">Blog</a>
+                    <a href="index.html#kontak" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">Kontak</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20konsultasi%20layanan%20digital%20marketing"
+                       target="_blank"
+                       class="inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-accent-500 to-accent-600 text-dark-900 font-semibold text-sm rounded-full hover:shadow-lg hover:shadow-accent-500/30 transform hover:-translate-y-0.5 transition-all duration-300">
+                        <i class="fab fa-whatsapp mr-2 text-lg text-green-700"></i>
+                        0877-7632-9910
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden relative w-10 h-10 flex items-center justify-center text-white focus:outline-none" aria-label="Toggle menu">
+                    <div class="hamburger-lines">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                        <span class="line line-3"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden mobile-menu-hidden overflow-hidden transition-all duration-500">
+            <div class="px-4 pb-6 pt-2 bg-dark-900/98 backdrop-blur-xl border-t border-white/5">
+                <div class="flex flex-col space-y-1">
+                    <a href="index.html#beranda" class="mobile-nav-link px-4 py-3 rounded-xl text-white/80 hover:text-white hover:bg-white/5 font-medium transition-all duration-200">Beranda</a>
+                    <a href="index.html#layanan" class="mobile-nav-link px-4 py-3 rounded-xl text-white/80 hover:text-white hover:bg-white/5 font-medium transition-all duration-200">Layanan</a>
+                    <a href="index.html#tentang" class="mobile-nav-link px-4 py-3 rounded-xl text-white/80 hover:text-white hover:bg-white/5 font-medium transition-all duration-200">Tentang Kami</a>
+                    <a href="index.html#portfolio" class="mobile-nav-link px-4 py-3 rounded-xl text-white/80 hover:text-white hover:bg-white/5 font-medium transition-all duration-200">Portfolio</a>
+                    <a href="index.html#testimoni" class="mobile-nav-link px-4 py-3 rounded-xl text-white/80 hover:text-white hover:bg-white/5 font-medium transition-all duration-200">Testimoni</a>
+                    <a href="blog.html" class="mobile-nav-link px-4 py-3 rounded-xl text-accent-400 bg-white/10 font-medium transition-all duration-200">Blog</a>
+                    <a href="index.html#kontak" class="mobile-nav-link px-4 py-3 rounded-xl text-white/80 hover:text-white hover:bg-white/5 font-medium transition-all duration-200">Kontak</a>
+                </div>
+                <div class="mt-4 pt-4 border-t border-white/10">
+                    <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20layanan%20Anda"
+                       target="_blank"
+                       class="flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-accent-500 to-accent-600 text-dark-900 font-semibold rounded-xl hover:shadow-lg transition-all duration-300">
+                        <i class="fab fa-whatsapp mr-2 text-lg text-green-700"></i>
+                        WhatsApp: 0877-7632-9910
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- BLOG HERO HEADER -->
+    <!-- ============================================ -->
+    <header class="pt-36 pb-20 bg-gradient-to-br from-dark-900 via-primary-950 to-dark-950 text-white relative overflow-hidden">
+        <div class="absolute inset-0 hero-grid-pattern opacity-10"></div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+            <span class="inline-block px-4 py-1.5 bg-white/10 text-accent-400 text-sm font-semibold rounded-full mb-4 border border-white/10">
+                <i class="fas fa-newspaper mr-1.5"></i> INSIGHTS &amp; STRATEGI
+            </span>
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
+                Blog &amp; Wawasan
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-500"> Digital Marketing</span>
+            </h1>
+            <p class="mt-6 text-base sm:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+                Panduan praktis, studi kasus teruji, dan strategi terbaru seputar SEO, Google Ads, Shopee Affiliate, dan optimasi omzet marketplace dari praktisi profesional.
+            </p>
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- BLOG CONTENT SECTION -->
+    <!-- ============================================ -->
+    <main class="py-16 lg:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Category Pills / Filter -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-14">
+                <button class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-primary-600 text-white shadow-md transition-all">
+                    Semua Topik
+                </button>
+                <button class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all">
+                    SEO &amp; Trafik Organik
+                </button>
+                <button class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all">
+                    Google Ads &amp; Performance
+                </button>
+                <button class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all">
+                    Shopee &amp; Tokopedia
+                </button>
+                <button class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all">
+                    Affiliate Marketing
+                </button>
+                <button class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all">
+                    Meta Ads (FB/IG)
+                </button>
+            </div>
+
+            <!-- Featured Article -->
+            <div class="mb-16 bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
+                <div class="grid lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 h-72 sm:h-96 rounded-2xl bg-gradient-to-br from-blue-900 via-indigo-950 to-slate-900 p-8 text-white flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute -right-8 -bottom-8 w-60 h-60 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
+                        <div class="flex items-center space-x-2">
+                            <span class="px-3 py-1 bg-accent-500 text-dark-900 text-xs font-bold rounded-full">STUDI KASUS UNGGULAN</span>
+                            <span class="text-xs text-white/70">• 7 Menit Baca</span>
+                        </div>
+                        <div>
+                            <span class="text-xs font-semibold text-blue-300 uppercase tracking-widest">SEO Enterprise</span>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-2 leading-tight">
+                                Bagaimana Meraih 1.790.000+ Trafik Organik Bulanan &amp; Peringkat #1 Google
+                            </h2>
+                        </div>
+                        <div class="flex items-center text-xs text-white/70 pt-4 border-t border-white/10">
+                            <i class="fas fa-chart-line text-accent-400 mr-2"></i> Studi Kasus Riil Optimasi SEO Finansial (BFI Finance)
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+                        <div>
+                            <span class="text-xs font-bold text-primary-600 uppercase tracking-wider">Search Engine Optimization</span>
+                            <h3 class="text-2xl font-bold text-dark-900 mt-2 leading-snug">
+                                Rahasia Menguasai Kata Kunci Finansial Kompetitif di Halaman Utama Google
+                            </h3>
+                            <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                                Temukan strategi on-page, keyword intent mapping, technical audit, dan arsitektur internal linking yang berhasil mendongkrak peringkat #1 Google pada kata kunci 'pembiayaan bpkb mobil' dan menjaring 1,79 juta klik organik.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center font-bold text-sm">YA</div>
+                                <div>
+                                    <p class="text-sm font-bold text-dark-900">Yogi Adnan</p>
+                                    <p class="text-xs text-gray-400">SEO &amp; Performance Lead</p>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20diskusi%20strategi%20SEO" target="_blank" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-700">
+                                Baca Strategi <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Articles Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Article 1 -->
+                <article class="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-amber-200 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-48 rounded-2xl bg-gradient-to-br from-amber-600 to-orange-700 p-6 text-white flex flex-col justify-between relative overflow-hidden mb-6">
+                            <div class="absolute -right-4 -bottom-4 w-32 h-32 bg-white/20 rounded-full blur-xl pointer-events-none"></div>
+                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold w-max">Google Ads B2B</span>
+                            <div>
+                                <span class="text-xs text-amber-200 uppercase tracking-wider block font-semibold">Studi Kasus Beta Pramesti</span>
+                                <h4 class="text-lg font-bold text-white mt-1">Forecast Revenue Rp19,9M dengan Ad Spend Rp10,5Jt</h4>
+                            </div>
+                        </div>
+                        <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Paid Acquisition</span>
+                        <h3 class="text-xl font-bold text-dark-900 mt-2 group-hover:text-amber-600 transition-colors">
+                            Strategi Winning Campaign Google Ads untuk Bisnis Manufaktur &amp; Industri
+                        </h3>
+                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                            Panduan memilih negative keyword, landing page intent, serta integrasi pelacakan deal di CRM HubSpot agar setiap rupiah iklan menghasilkan prospek bisnis bernilai miliaran.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-gray-100 mt-6 flex items-center justify-between text-xs text-gray-500">
+                        <span><i class="far fa-calendar-alt mr-1"></i> 5 Menit Baca</span>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20ingin%20konsultasi%20Google%20Ads" target="_blank" class="font-bold text-amber-600 hover:text-amber-700 flex items-center">
+                            Konsultasi Iklan <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-emerald-200 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-48 rounded-2xl bg-gradient-to-br from-emerald-600 to-teal-800 p-6 text-white flex flex-col justify-between relative overflow-hidden mb-6">
+                            <div class="absolute -right-4 -bottom-4 w-32 h-32 bg-white/20 rounded-full blur-xl pointer-events-none"></div>
+                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold w-max">ROAS 84,42x</span>
+                            <div>
+                                <span class="text-xs text-emerald-200 uppercase tracking-wider block font-semibold">Shopee Ads Optimization</span>
+                                <h4 class="text-lg font-bold text-white mt-1">Modal Iklan Rp55.862 Tembus Penjualan Rp4,72 Juta</h4>
+                            </div>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Marketplace Ads</span>
+                        <h3 class="text-xl font-bold text-dark-900 mt-2 group-hover:text-emerald-600 transition-colors">
+                            Cara Setting Shopee Ads Tanpa Boncos dengan ROAS Eksponensial
+                        </h3>
+                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                            Bongkar taktik memilih kata kunci spesifik (exact match), kontrol bid bertahap, dan penataan etalase produk winning agar rasio konversi melonjak tinggi.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-gray-100 mt-6 flex items-center justify-between text-xs text-gray-500">
+                        <span><i class="far fa-calendar-alt mr-1"></i> 6 Menit Baca</span>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20ingin%20tahu%20cara%20Shopee%20Ads%20ROAS%20tinggi" target="_blank" class="font-bold text-emerald-600 hover:text-emerald-700 flex items-center">
+                            Pelajari <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-pink-200 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-48 rounded-2xl bg-gradient-to-br from-pink-600 to-purple-800 p-6 text-white flex flex-col justify-between relative overflow-hidden mb-6">
+                            <div class="absolute -right-4 -bottom-4 w-32 h-32 bg-white/20 rounded-full blur-xl pointer-events-none"></div>
+                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold w-max">ROI 29,5x</span>
+                            <div>
+                                <span class="text-xs text-pink-200 uppercase tracking-wider block font-semibold">Affiliate Marketing</span>
+                                <h4 class="text-lg font-bold text-white mt-1">Omzet Rp76,8 Juta / Bulan Melalui Jaringan Affiliate</h4>
+                            </div>
+                        </div>
+                        <span class="text-xs font-bold text-pink-600 uppercase tracking-wider">Affiliate Strategy</span>
+                        <h3 class="text-xl font-bold text-dark-900 mt-2 group-hover:text-pink-600 transition-colors">
+                            Membangun Sistem Affiliate Seller untuk Mendongkrak Penjualan Otomatis
+                        </h3>
+                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                            Langkah demi langkah merekrut affiliate creator, menyusun struktur komisi yang memotivasi, dan melacak link pembelian baru dengan ROI lebih dari 29 kali lipat.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-gray-100 mt-6 flex items-center justify-between text-xs text-gray-500">
+                        <span><i class="far fa-calendar-alt mr-1"></i> 8 Menit Baca</span>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20ingin%20bangun%20affiliate%20toko%20saya" target="_blank" class="font-bold text-pink-600 hover:text-pink-700 flex items-center">
+                            Bangun Affiliate <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-200 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-48 rounded-2xl bg-gradient-to-br from-blue-700 to-indigo-900 p-6 text-white flex flex-col justify-between relative overflow-hidden mb-6">
+                            <div class="absolute -right-4 -bottom-4 w-32 h-32 bg-white/20 rounded-full blur-xl pointer-events-none"></div>
+                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold w-max">Meta Ads (FB/IG)</span>
+                            <div>
+                                <span class="text-xs text-blue-200 uppercase tracking-wider block font-semibold">ROAS Hingga 12,03x</span>
+                                <h4 class="text-lg font-bold text-white mt-1">Strategi Retargeting &amp; Dynamic Creative Ads</h4>
+                            </div>
+                        </div>
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Social Ads</span>
+                        <h3 class="text-xl font-bold text-dark-900 mt-2 group-hover:text-blue-600 transition-colors">
+                            Teknik Retargeting Meta Ads yang Terbukti Menghasilkan Pembelian Berulang
+                        </h3>
+                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                            Cara memanfaatkan Custom Audience, Lookalike Audience, dan Conversions API untuk menyasar kembali pengguna yang belum checkout hingga terjadi transaksi.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-gray-100 mt-6 flex items-center justify-between text-xs text-gray-500">
+                        <span><i class="far fa-calendar-alt mr-1"></i> 6 Menit Baca</span>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20butuh%20jasa%20Meta%20Ads" target="_blank" class="font-bold text-blue-600 hover:text-blue-700 flex items-center">
+                            Pelajari <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-slate-300 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-48 rounded-2xl bg-gradient-to-br from-slate-900 to-black p-6 text-white flex flex-col justify-between relative overflow-hidden mb-6">
+                            <div class="absolute -right-4 -bottom-4 w-32 h-32 bg-emerald-500/20 rounded-full blur-xl pointer-events-none"></div>
+                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold w-max">Growth +334%</span>
+                            <div>
+                                <span class="text-xs text-gray-300 uppercase tracking-wider block font-semibold">TikTok Shop &amp; Tokopedia</span>
+                                <h4 class="text-lg font-bold text-white mt-1">Multi-Channel Sync: Omzet Tembus Rp119,7 Juta</h4>
+                            </div>
+                        </div>
+                        <span class="text-xs font-bold text-slate-800 uppercase tracking-wider">Omnichannel Commerce</span>
+                        <h3 class="text-xl font-bold text-dark-900 mt-2 group-hover:text-slate-800 transition-colors">
+                            Kombinasi Live Stream &amp; Short Video untuk Melejitkan GMV Tokopedia &amp; TikTok
+                        </h3>
+                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                            Formula konten video storytelling, flash voucher saat live shopping, dan integrasi stok multi-gudang demi menjaga metrik toko tetap 0 poin penalti.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-gray-100 mt-6 flex items-center justify-between text-xs text-gray-500">
+                        <span><i class="far fa-calendar-alt mr-1"></i> 5 Menit Baca</span>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20ingin%20optimasi%20TikTok%20Shop" target="_blank" class="font-bold text-slate-900 hover:text-black flex items-center">
+                            Pelajari <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-yellow-200 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="h-48 rounded-2xl bg-gradient-to-br from-yellow-600 via-amber-600 to-orange-800 p-6 text-white flex flex-col justify-between relative overflow-hidden mb-6">
+                            <div class="absolute -right-4 -bottom-4 w-32 h-32 bg-white/20 rounded-full blur-xl pointer-events-none"></div>
+                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold w-max">Website &amp; SEO</span>
+                            <div>
+                                <span class="text-xs text-yellow-200 uppercase tracking-wider block font-semibold">Web Conversion Architecture</span>
+                                <h4 class="text-lg font-bold text-white mt-1">Membangun Landing Page Berkecepatan Tinggi</h4>
+                            </div>
+                        </div>
+                        <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Web Development</span>
+                        <h3 class="text-xl font-bold text-dark-900 mt-2 group-hover:text-amber-600 transition-colors">
+                            7 Elemen Wajib Website Agensi &amp; Bisnis Agar Siap Diklankan Tanpa Bocor
+                        </h3>
+                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                            Struktur layout mobile-first, call-to-action WhatsApp langsung, tombol telpon satu klik, serta optimasi Core Web Vitals untuk konversi maksimal.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-gray-100 mt-6 flex items-center justify-between text-xs text-gray-500">
+                        <span><i class="far fa-calendar-alt mr-1"></i> 5 Menit Baca</span>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20butuh%20jasa%20pembuatan%20website" target="_blank" class="font-bold text-amber-600 hover:text-amber-700 flex items-center">
+                            Buat Website <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- CTA Box Inside Blog -->
+            <div class="mt-20 bg-gradient-to-r from-primary-700 via-primary-800 to-dark-900 rounded-3xl p-8 sm:p-14 text-white shadow-2xl relative overflow-hidden text-center">
+                <div class="absolute inset-0 hero-grid-pattern opacity-10"></div>
+                <div class="relative max-w-2xl mx-auto">
+                    <span class="px-4 py-1.5 bg-accent-500 text-dark-900 text-xs font-extrabold rounded-full uppercase tracking-wider mb-4 inline-block">
+                        KONSULTASI STRATEGI
+                    </span>
+                    <h3 class="text-2xl sm:text-4xl font-extrabold text-white mt-2 leading-tight">
+                        Ingin Strategi Ini Diterapkan Langsung ke Bisnis Anda?
+                    </h3>
+                    <p class="text-white/70 text-sm sm:text-base mt-4 leading-relaxed">
+                        Diskusikan target omzet, efisiensi iklan, atau kebutuhan website Anda dengan tim praktisi kami secara GRATIS tanpa komitmen.
+                    </p>
+                    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20telah%20membaca%20blog%20dan%20ingin%20konsultasi%20bisnis"
+                           target="_blank"
+                           class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-bold rounded-2xl shadow-xl hover:shadow-green-500/30 transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-3 text-xl"></i>
+                            Chat WhatsApp (0877-7632-9910)
+                        </a>
+                        <a href="index.html#portfolio"
+                           class="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold rounded-2xl transition-all inline-flex items-center justify-center">
+                            <i class="fas fa-trophy mr-2 text-accent-400"></i>
+                            Lihat Bukti Portofolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ============================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================ -->
+    <footer class="bg-dark-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-500/50 to-transparent"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 lg:pt-20 pb-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
+
+                <!-- Company Info -->
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="inline-block mb-4">
+                        <img src="images/logo-white.svg" alt="DIGMAR Logo" class="h-11 w-auto">
+                    </a>
+                    <p class="text-white/50 leading-relaxed mb-6">
+                        Solusi Digital Marketing &amp; Affiliate Terpercaya untuk pertumbuhan bisnis Anda di era digital.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 bg-white/5 hover:bg-primary-600 rounded-xl flex items-center justify-center text-white/50 hover:text-white transition-all duration-300 border border-white/5 hover:border-primary-500">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 rounded-xl flex items-center justify-center text-white/50 hover:text-white transition-all duration-300 border border-white/5 hover:border-pink-400">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 hover:bg-dark-800 rounded-xl flex items-center justify-center text-white/50 hover:text-white transition-all duration-300 border border-white/5 hover:border-white/20">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 hover:bg-blue-600 rounded-xl flex items-center justify-center text-white/50 hover:text-white transition-all duration-300 border border-white/5 hover:border-blue-400">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 hover:bg-red-600 rounded-xl flex items-center justify-center text-white/50 hover:text-white transition-all duration-300 border border-white/5 hover:border-red-400">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-6">Navigasi</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#beranda" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Beranda</a></li>
+                        <li><a href="index.html#layanan" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Layanan</a></li>
+                        <li><a href="index.html#tentang" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Tentang Kami</a></li>
+                        <li><a href="index.html#portfolio" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Portfolio</a></li>
+                        <li><a href="index.html#testimoni" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Testimoni</a></li>
+                        <li><a href="blog.html" class="text-accent-400 font-semibold transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-accent-400"></i>Blog</a></li>
+                        <li><a href="index.html#kontak" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Kontak</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Links -->
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-6">Layanan</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#layanan" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Pembuatan Website</a></li>
+                        <li><a href="index.html#layanan" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Google Ads</a></li>
+                        <li><a href="index.html#layanan" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Meta Ads</a></li>
+                        <li><a href="index.html#layanan" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>TikTok Affiliate</a></li>
+                        <li><a href="index.html#layanan" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>SEO &amp; Branding</a></li>
+                        <li><a href="index.html#layanan" class="text-white/50 hover:text-accent-400 transition-colors flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-white/20"></i>Pelatihan</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-6">Hubungi Kami</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-map-marker-alt text-primary-400"></i>
+                            </div>
+                            <div>
+                                <p class="text-white/70 text-sm leading-relaxed">
+                                    Jl. mahoni raya, poris plawat tangerang, banten
+                                </p>
+                            </div>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-primary-400"></i>
+                            </div>
+                            <a href="mailto:hello@digmar.id" class="text-white/50 hover:text-accent-400 transition-colors text-sm">hello@digmar.id</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone-alt text-primary-400"></i>
+                            </div>
+                            <a href="tel:+6287776329910" class="text-white/50 hover:text-accent-400 transition-colors text-sm">+62 877-7632-9910</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-whatsapp text-green-400"></i>
+                            </div>
+                            <a href="https://wa.me/6287776329910" target="_blank" class="text-white/70 hover:text-accent-400 transition-colors text-sm font-semibold">0877-7632-9910 (WhatsApp)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-white/30 text-sm">
+                    &copy; 2026 <span class="text-white/50">DIGMAR</span> (Jasa Digmar Affiliate). All rights reserved.
+                </p>
+                <div class="flex items-center space-x-6 text-sm text-white/30">
+                    <a href="#" class="hover:text-white/60 transition-colors">Kebijakan Privasi</a>
+                    <a href="#" class="hover:text-white/60 transition-colors">Syarat &amp; Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <!-- ============================================ -->
+    <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20layanan%20Anda"
+       target="_blank"
+       id="whatsapp-float"
+       class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/30 hover:shadow-green-500/50 transform hover:scale-110 transition-all duration-300 group"
+       aria-label="Chat WhatsApp">
+        <i class="fab fa-whatsapp text-white text-3xl"></i>
+        <!-- Tooltip -->
+        <span class="absolute right-20 bg-white text-dark-900 text-sm font-semibold px-4 py-2 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+            Chat 0877-7632-9910
+        </span>
+        <!-- Pulse Ring -->
+        <span class="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-20"></span>
+    </a>
+
+    <!-- ============================================ -->
+    <!-- BACK TO TOP BUTTON -->
+    <!-- ============================================ -->
+    <button id="back-to-top"
+            class="fixed bottom-6 left-6 z-50 w-12 h-12 bg-primary-700 text-white rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transform translate-y-4 transition-all duration-500 hover:bg-primary-600 hover:-translate-y-1"
+            aria-label="Kembali ke atas">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
