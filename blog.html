@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog & Wawasan Digital Marketing - DIGMAR. Pelajari tips SEO, optimasi Google Ads, strategi Shopee Affiliate, dan teknik scale-up omzet marketplace.">
-    <meta name="keywords" content="blog digital marketing, tips seo, belajar affiliate shopee, panduan google ads, scale up marketplace, artikel digital agency">
-    <title>Blog &amp; Wawasan Digital Marketing — DIGMAR</title>
+    <meta name="description" content="Blog & Wawasan Digital Marketing - DIGMAR. Kumpulan 20 artikel praktis seputar SEO, Google Ads, optimasi Shopee Marketplace, strategi Shopee Affiliate, dan teknik scale-up omzet bisnis online.">
+    <meta name="keywords" content="blog digital marketing, 20 artikel digital marketing, tips seo bfi finance, optimasi shopee ads roas tinggi, shopee affiliate roi 29x, google ads b2b, agensi digital tangerang">
+    <title>Blog &amp; 20 Artikel Wawasan Digital Marketing — DIGMAR</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
@@ -58,6 +58,14 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .article-card {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .article-card.hidden-card {
+            display: none !important;
+        }
+    </style>
 </head>
 <body class="font-sans text-gray-700 bg-white antialiased">
 
@@ -138,256 +146,783 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
             <span class="inline-block px-4 py-1.5 bg-white/10 text-accent-400 text-sm font-semibold rounded-full mb-4 border border-white/10">
-                <i class="fas fa-newspaper mr-1.5"></i> INSIGHTS &amp; STRATEGI
+                <i class="fas fa-book-open mr-1.5"></i> 20 ARTIKEL &amp; STRATEGI PRAKTISI
             </span>
             <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
-                Blog &amp; Wawasan
+                Pusat Wawasan &amp; Edukasi
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-500"> Digital Marketing</span>
             </h1>
             <p class="mt-6 text-base sm:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-                Panduan praktis, studi kasus teruji, dan strategi terbaru seputar SEO, Google Ads, Shopee Affiliate, dan optimasi omzet marketplace dari praktisi profesional.
+                Koleksi 20 artikel panduan taktis seputar SEO organik, optimasi Google Ads &amp; Meta Ads, rahasia scale-up Shopee omzet miliaran, dan strategi Shopee Affiliate ROI tinggi.
             </p>
+
+            <!-- Search Bar in Hero -->
+            <div class="mt-8 max-w-xl mx-auto relative">
+                <div class="relative flex items-center">
+                    <i class="fas fa-search absolute left-5 text-gray-400 text-lg"></i>
+                    <input type="text" id="article-search" placeholder="Cari artikel (misal: SEO, Shopee Ads, Affiliate, Google Ads)..." class="w-full pl-14 pr-6 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-accent-400 transition-all">
+                </div>
+            </div>
         </div>
     </header>
 
     <!-- ============================================ -->
-    <!-- BLOG CONTENT SECTION -->
+    <!-- BLOG CONTENT SECTION (20 ARTICLES) -->
     <!-- ============================================ -->
     <main class="py-16 lg:py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <!-- Category Pills / Filter -->
-            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-14">
-                <button class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-primary-600 text-white shadow-md transition-all">
-                    Semua Topik
+            <!-- Category Pills / Filter Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12" id="blog-category-filters">
+                <button class="cat-filter-btn active px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-primary-600 text-white shadow-md transition-all" data-category="all">
+                    Semua (20)
                 </button>
-                <button class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all">
-                    SEO &amp; Trafik Organik
+                <button class="cat-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all" data-category="seo">
+                    SEO &amp; Organik
                 </button>
-                <button class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all">
-                    Google Ads &amp; Performance
+                <button class="cat-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all" data-category="ads">
+                    Google &amp; Meta Ads
                 </button>
-                <button class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all">
-                    Shopee &amp; Tokopedia
+                <button class="cat-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all" data-category="marketplace">
+                    Marketplace E-Commerce
                 </button>
-                <button class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all">
+                <button class="cat-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all" data-category="affiliate">
                     Affiliate Marketing
                 </button>
-                <button class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all">
-                    Meta Ads (FB/IG)
+                <button class="cat-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all" data-category="strategy">
+                    Strategi &amp; CRM
                 </button>
             </div>
 
-            <!-- Featured Article -->
-            <div class="mb-16 bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
-                <div class="grid lg:grid-cols-12 gap-8 items-center">
-                    <div class="lg:col-span-7 h-72 sm:h-96 rounded-2xl bg-gradient-to-br from-blue-900 via-indigo-950 to-slate-900 p-8 text-white flex flex-col justify-between relative overflow-hidden">
-                        <div class="absolute -right-8 -bottom-8 w-60 h-60 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
-                        <div class="flex items-center space-x-2">
-                            <span class="px-3 py-1 bg-accent-500 text-dark-900 text-xs font-bold rounded-full">STUDI KASUS UNGGULAN</span>
-                            <span class="text-xs text-white/70">• 7 Menit Baca</span>
+            <!-- Articles Grid (20 Articles) -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-container">
+
+                <!-- Article Card 1 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="seo">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-1.svg" alt="Panduan Lengkap SEO 2026: Cara Meraih Peringkat #1 Google untuk Kata Kunci Kompetitif" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                SEO & Organik
+                            </span>
                         </div>
-                        <div>
-                            <span class="text-xs font-semibold text-blue-300 uppercase tracking-widest">SEO Enterprise</span>
-                            <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-2 leading-tight">
-                                Bagaimana Meraih 1.790.000+ Trafik Organik Bulanan &amp; Peringkat #1 Google
-                            </h2>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 18 Jan 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 7 Menit Baca</span>
                         </div>
-                        <div class="flex items-center text-xs text-white/70 pt-4 border-t border-white/10">
-                            <i class="fas fa-chart-line text-accent-400 mr-2"></i> Studi Kasus Riil Optimasi SEO Finansial (BFI Finance)
-                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Search Engine Optimization</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Panduan Lengkap SEO 2026: Cara Meraih Peringkat #1 Google untuk Kata Kunci Kompetitif
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Bagaimana optimasi search intent, audit teknikal Core Web Vitals, dan arsitektur internal link berhasil menghasilkan 1,79 juta klik organik serta peringkat #1 Google pada kata kunci finansial kompetitif.
+                        </p>
                     </div>
-                    <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
-                        <div>
-                            <span class="text-xs font-bold text-primary-600 uppercase tracking-wider">Search Engine Optimization</span>
-                            <h3 class="text-2xl font-bold text-dark-900 mt-2 leading-snug">
-                                Rahasia Menguasai Kata Kunci Finansial Kompetitif di Halaman Utama Google
-                            </h3>
-                            <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                                Temukan strategi on-page, keyword intent mapping, technical audit, dan arsitektur internal linking yang berhasil mendongkrak peringkat #1 Google pada kata kunci 'pembiayaan bpkb mobil' dan menjaring 1,79 juta klik organik.
-                            </p>
-                        </div>
-                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-10 h-10 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center font-bold text-sm">YA</div>
-                                <div>
-                                    <p class="text-sm font-bold text-dark-900">Yogi Adnan</p>
-                                    <p class="text-xs text-gray-400">SEO &amp; Performance Lead</p>
-                                </div>
-                            </div>
-                            <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20diskusi%20strategi%20SEO" target="_blank" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-700">
-                                Baca Strategi <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                            </a>
-                        </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(1)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%201:%20Panduan%20Lengkap%20SEO%202026%3A%20Cara%20Meraih%20Peringkat%20%231%20Google%20untuk%20Kata%20Kunci%20Kompetitif" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
                     </div>
-                </div>
+                </article>
+
+                <!-- Article Card 2 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="ads">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-2.svg" alt="Strategi Winning Campaign Google Ads B2B: Forecast Revenue Rp19,9 Miliar dengan Budget Efisien" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                Google & Meta Ads
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 25 Jan 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 6 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Google Search Ads</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Strategi Winning Campaign Google Ads B2B: Forecast Revenue Rp19,9 Miliar dengan Budget Efisien
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Membongkar struktur kampanye search terms, negative keywords presisi, dan sinkronisasi CRM HubSpot yang menghasilkan 301 deals berkualitas dengan modal iklan Rp10,5 Juta.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(2)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%202:%20Strategi%20Winning%20Campaign%20Google%20Ads%20B2B%3A%20Forecast%20Revenue%20Rp19%2C9%20Miliar%20dengan%20Budget%20Efisien" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 3 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="marketplace">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-3.svg" alt="Scale-Up Toko Shopee Tembus Penjualan Rp2,35 Miliar dengan Zero Penalty Point" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                Marketplace & E-Commerce
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 02 Feb 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 8 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Shopee Seller Scale</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Scale-Up Toko Shopee Tembus Penjualan Rp2,35 Miliar dengan Zero Penalty Point
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Langkah terstruktur mengelola toko ritel Shopee dari pengaturan etalase psikologis, formula flash sale, hingga otomatisasi pemenuhan pesanan demi mencapai 0 poin penalti.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(3)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%203:%20Scale-Up%20Toko%20Shopee%20Tembus%20Penjualan%20Rp2%2C35%20Miliar%20dengan%20Zero%20Penalty%20Point" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 4 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="ads">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-4.svg" alt="Bongkar Taktik Shopee Ads: Meraih ROAS 84,42x Tanpa Boncos" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                Google & Meta Ads
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 10 Feb 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 5 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Shopee Ads</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Bongkar Taktik Shopee Ads: Meraih ROAS 84,42x Tanpa Boncos
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Bagaimana kampanye produk UPVC Glassy dengan modal iklan Rp55.862 mampu mencetak omzet teratribusi Rp4,72 Juta melalui penargetan kata kunci spesifik.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(4)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%204:%20Bongkar%20Taktik%20Shopee%20Ads%3A%20Meraih%20ROAS%2084%2C42x%20Tanpa%20Boncos" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 5 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="affiliate">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-5.svg" alt="Panduan Shopee Affiliate Seller: Rahasia ROI 29,5x & Penjualan Puluhan Juta per Bulan" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                Affiliate Marketing
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 17 Feb 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 7 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Affiliate Marketing</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Panduan Shopee Affiliate Seller: Rahasia ROI 29,5x & Penjualan Puluhan Juta per Bulan
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Membangun program komisi affiliate mandiri yang menghasilkan Rp76,8 Juta penjualan bulanan dari 11.000 klik tertarget tanpa modal iklan di awal.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(5)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%205:%20Panduan%20Shopee%20Affiliate%20Seller%3A%20Rahasia%20ROI%2029%2C5x%20%26%20Penjualan%20Puluhan%20Juta%20per%20Bulan" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 6 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="ads">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-6.svg" alt="Strategi Retargeting Meta Ads (Facebook & Instagram): Konversi Berulang dengan ROAS 12x" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                Google & Meta Ads
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 24 Feb 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 6 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Meta Ads Retargeting</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Strategi Retargeting Meta Ads (Facebook & Instagram): Konversi Berulang dengan ROAS 12x
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Teknik pemanfaatan Meta Pixel, Conversions API, dan Custom Audiences untuk menyasar kembali pengunjung toko yang belum checkout hingga terjadi transaksi.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(6)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%206:%20Strategi%20Retargeting%20Meta%20Ads%20(Facebook%20%26%20Instagram)%3A%20Konversi%20Berulang%20dengan%20ROAS%2012x" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 7 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="marketplace">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-7.svg" alt="Integrasi Multi-Channel TikTok Shop & Tokopedia: Melejitkan GMV +334% dalam 4 Bulan" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                Marketplace & E-Commerce
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 03 Mar 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 6 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">TikTok Shop & Tokopedia</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Integrasi Multi-Channel TikTok Shop & Tokopedia: Melejitkan GMV +334% dalam 4 Bulan
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Strategi sinkronisasi inventaris, flash sale simultan, dan video pendek yang berhasil melipatgandakan GMV dari puluhan juta menjadi Rp119,7 Juta.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(7)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%207:%20Integrasi%20Multi-Channel%20TikTok%20Shop%20%26%20Tokopedia%3A%20Melejitkan%20GMV%20%2B334%25%20dalam%204%20Bulan" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 8 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="seo">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-8.svg" alt="Technical SEO Audit: Optimasi Core Web Vitals & Kecepatan Indexing Google Search Console" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                SEO & Organik
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 11 Mar 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 8 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Technical SEO</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Technical SEO Audit: Optimasi Core Web Vitals & Kecepatan Indexing Google Search Console
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Langkah-langkah teknis memperbaiki LCP, FID/INP, dan CLS hingga skor PageSpeed 99/100 demi menjamin crawling bot Google berjalan sempurna.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(8)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%208:%20Technical%20SEO%20Audit%3A%20Optimasi%20Core%20Web%20Vitals%20%26%20Kecepatan%20Indexing%20Google%20Search%20Console" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 9 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="strategy">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-9.svg" alt="Anatomi Landing Page Berkonversi Tinggi: Menghasilkan Leads WhatsApp Non-Stop" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                Strategi & CRM
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 18 Mar 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 6 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Conversion Rate Optimization</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Anatomi Landing Page Berkonversi Tinggi: Menghasilkan Leads WhatsApp Non-Stop
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Struktur layout landing page yang terbukti menghasilkan rasio konversi di atas 12% dengan tombol pesan langsung WhatsApp dan CTA psikologis.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(9)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%209:%20Anatomi%20Landing%20Page%20Berkonversi%20Tinggi%3A%20Menghasilkan%20Leads%20WhatsApp%20Non-Stop" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 10 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="strategy">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-10.svg" alt="Cara Membaca Google Analytics 4 (GA4): Menemukan Saluran Trafik Paling Menghasilkan Uang" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                Strategi & CRM
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 26 Mar 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 7 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">GA4 & Data Analytics</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Cara Membaca Google Analytics 4 (GA4): Menemukan Saluran Trafik Paling Menghasilkan Uang
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Panduan praktis navigasi User Acquisition, Session Default Channel Group, dan pelacakan Conversion Events untuk membedakan trafik berguna vs trafik zonk.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(10)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%2010:%20Cara%20Membaca%20Google%20Analytics%204%20(GA4)%3A%20Menemukan%20Saluran%20Trafik%20Paling%20Menghasilkan%20Uang" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 11 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="affiliate">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-11.svg" alt="Membangun Pasukan Affiliate Creator: Taktik Rekrutmen & Skema Komisi Win-Win" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                Affiliate Marketing
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 04 Apr 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 7 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Creator Affiliate</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Membangun Pasukan Affiliate Creator: Taktik Rekrutmen & Skema Komisi Win-Win
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Bagaimana mencari 500+ micro creator di Shopee dan TikTok untuk mereview produk Anda secara konsisten tanpa perlu membayar biaya endorsement mahal.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(11)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%2011:%20Membangun%20Pasukan%20Affiliate%20Creator%3A%20Taktik%20Rekrutmen%20%26%20Skema%20Komisi%20Win-Win" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 12 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="seo">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-12.svg" alt="Optimasi Google Business Profile (GBP): Cara Mendatangkan Ratusan Pengunjung Fisik ke Cabang" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                SEO & Organik
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 12 Apr 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 5 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Local SEO & Google Maps</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Optimasi Google Business Profile (GBP): Cara Mendatangkan Ratusan Pengunjung Fisik ke Cabang
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Studi kasus BFI Cabang Tambun: Menghasilkan 442 permintaan petunjuk arah dan panggilan telepon dalam satu bulan melalui optimasi SEO lokal.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(12)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%2012:%20Optimasi%20Google%20Business%20Profile%20(GBP)%3A%20Cara%20Mendatangkan%20Ratusan%20Pengunjung%20Fisik%20ke%20Cabang" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 13 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="seo">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-13.svg" alt="Riset Keyword Transaksional: Membedakan Informational vs Transactional Intent" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                SEO & Organik
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 20 Apr 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 6 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Keyword Research</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Riset Keyword Transaksional: Membedakan Informational vs Transactional Intent
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Cara menemukan kata kunci yang langsung dicari calon pembeli siap bayar menggunakan Semrush dan Google Search Console.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(13)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%2013:%20Riset%20Keyword%20Transaksional%3A%20Membedakan%20Informational%20vs%20Transactional%20Intent" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 14 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="strategy">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-14.svg" alt="Mengoptimalkan Budget Iklan UMKM: Strategi Alokasi Modal Antara Meta Ads, Google Ads & Shopee" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                Strategi & CRM
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 28 Apr 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 6 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Budget Optimization</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Mengoptimalkan Budget Iklan UMKM: Strategi Alokasi Modal Antara Meta Ads, Google Ads & Shopee
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Rumus alokasi anggaran 70-20-10 untuk membagi modal pemasaran digital agar bisnis tetap untung dan risiko boncos terkendali.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(14)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%2014:%20Mengoptimalkan%20Budget%20Iklan%20UMKM%3A%20Strategi%20Alokasi%20Modal%20Antara%20Meta%20Ads%2C%20Google%20Ads%20%26%20Shopee" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 15 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="marketplace">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-15.svg" alt="Formula Live Streaming Shopping Shopee & TikTok: Trik Closing Produk Saat Siaran Langsung" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                Marketplace & E-Commerce
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 06 Mei 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 7 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Live Shopping Mastery</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Formula Live Streaming Shopping Shopee & TikTok: Trik Closing Produk Saat Siaran Langsung
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Teknik menyusun naskah live, rotasi voucher kilat berbatas waktu, dan membangun urgensi belanja instan yang melipatgandakan pesanan keranjang kuning.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(15)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%2015:%20Formula%20Live%20Streaming%20Shopping%20Shopee%20%26%20TikTok%3A%20Trik%20Closing%20Produk%20Saat%20Siaran%20Langsung" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 16 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="strategy">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-16.svg" alt="Pentingnya Sertifikasi Digital Marketing (Google, Semrush, HubSpot) untuk Kepercayaan Bisnis" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                Strategi & CRM
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 14 Mei 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 5 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Professional Certification</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Pentingnya Sertifikasi Digital Marketing (Google, Semrush, HubSpot) untuk Kepercayaan Bisnis
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Mengapa kredensial resmi dari raksasa teknologi dunia menjadi pembeda antara agensi abal-abal dengan praktisi terpercaya yang menjaga keamanan akun Anda.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(16)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%2016:%20Pentingnya%20Sertifikasi%20Digital%20Marketing%20(Google%2C%20Semrush%2C%20HubSpot)%20untuk%20Kepercayaan%20Bisnis" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 17 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="marketplace">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-17.svg" alt="Manajemen Stok & Fulfillment Flash Sale: Mengatasi Ribuan Pesanan dalam 24 Jam" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                Marketplace & E-Commerce
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 22 Mei 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 6 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Warehouse & Fulfillment</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Manajemen Stok & Fulfillment Flash Sale: Mengatasi Ribuan Pesanan dalam 24 Jam
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            SOP pergudangan, barcode scanning packing, dan sinkronisasi stok otomatis antar-marketplace agar pengiriman tidak terlambat dan rating toko tetap bintang 4.9.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(17)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%2017:%20Manajemen%20Stok%20%26%20Fulfillment%20Flash%20Sale%3A%20Mengatasi%20Ribuan%20Pesanan%20dalam%2024%20Jam" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 18 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="strategy">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-18.svg" alt="Strategi WhatsApp & Email Automation: Mengubah Pembeli Pertama Menjadi Pelanggan Loyal" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                Strategi & CRM
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 30 Mei 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 6 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">CRM & Retention</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Strategi WhatsApp & Email Automation: Mengubah Pembeli Pertama Menjadi Pelanggan Loyal
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Alur pesan purna-jual otomatis, kartu ucapan terima kasih dengan QR Code komisi affiliate, dan follow-up pengingat repeat order.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(18)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%2018:%20Strategi%20WhatsApp%20%26%20Email%20Automation%3A%20Mengubah%20Pembeli%20Pertama%20Menjadi%20Pelanggan%20Loyal" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 19 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="strategy">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-19.svg" alt="Trik Copywriting Iklan Hook-Story-Offer: Formula yang Memancing Klik & Pembelian Cepat" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                Strategi & CRM
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 08 Jun 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 5 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">High-Converting Copywriting</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Trik Copywriting Iklan Hook-Story-Offer: Formula yang Memancing Klik & Pembelian Cepat
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Panduan merangkai 3 detik pertama teks headline, menjembatani masalah emosional calon pembeli, dan mengakhiri dengan penawaran yang sulit ditolak.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(19)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%2019:%20Trik%20Copywriting%20Iklan%20Hook-Story-Offer%3A%20Formula%20yang%20Memancing%20Klik%20%26%20Pembelian%20Cepat" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 20 -->
+                <article class="article-card bg-white rounded-3xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-primary-200 transition-all duration-300 flex flex-col justify-between group" data-category="strategy">
+                    <div>
+                        <!-- Primary Image -->
+                        <div class="overflow-hidden rounded-2xl mb-5 aspect-[16/10] bg-gray-100 relative">
+                            <img src="images/articles/article-20.svg" alt="Roadmap Transformasi Digital UMKM 2026: Dari Toko Konvensional Menuju Brand Digital Skala Nasional" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <span class="absolute top-3 left-3 px-3 py-1 bg-dark-900/85 backdrop-blur-md text-accent-400 font-bold text-xs rounded-full shadow-md">
+                                Strategi & CRM
+                            </span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2 text-xs text-gray-400 mb-2">
+                            <span><i class="far fa-calendar-alt mr-1"></i> 16 Jun 2026</span>
+                            <span>•</span>
+                            <span><i class="far fa-clock mr-1"></i> 8 Menit Baca</span>
+                        </div>
+
+                        <span class="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Digital Blueprint 2026</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-900 leading-snug group-hover:text-primary-600 transition-colors line-clamp-2">
+                            Roadmap Transformasi Digital UMKM 2026: Dari Toko Konvensional Menuju Brand Digital Skala Nasional
+                        </h3>
+                        <p class="text-gray-500 text-sm mt-3 leading-relaxed line-clamp-3">
+                            Cetak biru lengkap 12 bulan membangun kehadiran digital terpadu mulai dari website resmi, optimasi marketplace, hingga kampanye affiliate mandiri.
+                        </p>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100 mt-6 flex items-center justify-between">
+                        <button onclick="openArticleModal(20)" class="inline-flex items-center text-sm font-bold text-primary-600 hover:text-primary-800 transition-colors">
+                            Baca Selengkapnya <i class="fas fa-arrow-right ml-1.5 text-xs"></i>
+                        </button>
+                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20tertarik%20dengan%20topik%20artikel%20nomor%2020:%20Roadmap%20Transformasi%20Digital%20UMKM%202026%3A%20Dari%20Toko%20Konvensional%20Menuju%20Brand%20Digital%20Skala%20Nasional" target="_blank" class="w-9 h-9 rounded-full bg-green-50 hover:bg-green-100 text-green-600 flex items-center justify-center transition-colors shadow-sm" title="Konsultasi via WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </article>
             </div>
 
-            <!-- Articles Grid -->
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Article 1 -->
-                <article class="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-amber-200 transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="h-48 rounded-2xl bg-gradient-to-br from-amber-600 to-orange-700 p-6 text-white flex flex-col justify-between relative overflow-hidden mb-6">
-                            <div class="absolute -right-4 -bottom-4 w-32 h-32 bg-white/20 rounded-full blur-xl pointer-events-none"></div>
-                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold w-max">Google Ads B2B</span>
-                            <div>
-                                <span class="text-xs text-amber-200 uppercase tracking-wider block font-semibold">Studi Kasus Beta Pramesti</span>
-                                <h4 class="text-lg font-bold text-white mt-1">Forecast Revenue Rp19,9M dengan Ad Spend Rp10,5Jt</h4>
-                            </div>
-                        </div>
-                        <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Paid Acquisition</span>
-                        <h3 class="text-xl font-bold text-dark-900 mt-2 group-hover:text-amber-600 transition-colors">
-                            Strategi Winning Campaign Google Ads untuk Bisnis Manufaktur &amp; Industri
-                        </h3>
-                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            Panduan memilih negative keyword, landing page intent, serta integrasi pelacakan deal di CRM HubSpot agar setiap rupiah iklan menghasilkan prospek bisnis bernilai miliaran.
-                        </p>
-                    </div>
-                    <div class="pt-6 border-t border-gray-100 mt-6 flex items-center justify-between text-xs text-gray-500">
-                        <span><i class="far fa-calendar-alt mr-1"></i> 5 Menit Baca</span>
-                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20ingin%20konsultasi%20Google%20Ads" target="_blank" class="font-bold text-amber-600 hover:text-amber-700 flex items-center">
-                            Konsultasi Iklan <i class="fas fa-chevron-right ml-1 text-xs"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Article 2 -->
-                <article class="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-emerald-200 transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="h-48 rounded-2xl bg-gradient-to-br from-emerald-600 to-teal-800 p-6 text-white flex flex-col justify-between relative overflow-hidden mb-6">
-                            <div class="absolute -right-4 -bottom-4 w-32 h-32 bg-white/20 rounded-full blur-xl pointer-events-none"></div>
-                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold w-max">ROAS 84,42x</span>
-                            <div>
-                                <span class="text-xs text-emerald-200 uppercase tracking-wider block font-semibold">Shopee Ads Optimization</span>
-                                <h4 class="text-lg font-bold text-white mt-1">Modal Iklan Rp55.862 Tembus Penjualan Rp4,72 Juta</h4>
-                            </div>
-                        </div>
-                        <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Marketplace Ads</span>
-                        <h3 class="text-xl font-bold text-dark-900 mt-2 group-hover:text-emerald-600 transition-colors">
-                            Cara Setting Shopee Ads Tanpa Boncos dengan ROAS Eksponensial
-                        </h3>
-                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            Bongkar taktik memilih kata kunci spesifik (exact match), kontrol bid bertahap, dan penataan etalase produk winning agar rasio konversi melonjak tinggi.
-                        </p>
-                    </div>
-                    <div class="pt-6 border-t border-gray-100 mt-6 flex items-center justify-between text-xs text-gray-500">
-                        <span><i class="far fa-calendar-alt mr-1"></i> 6 Menit Baca</span>
-                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20ingin%20tahu%20cara%20Shopee%20Ads%20ROAS%20tinggi" target="_blank" class="font-bold text-emerald-600 hover:text-emerald-700 flex items-center">
-                            Pelajari <i class="fas fa-chevron-right ml-1 text-xs"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Article 3 -->
-                <article class="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-pink-200 transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="h-48 rounded-2xl bg-gradient-to-br from-pink-600 to-purple-800 p-6 text-white flex flex-col justify-between relative overflow-hidden mb-6">
-                            <div class="absolute -right-4 -bottom-4 w-32 h-32 bg-white/20 rounded-full blur-xl pointer-events-none"></div>
-                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold w-max">ROI 29,5x</span>
-                            <div>
-                                <span class="text-xs text-pink-200 uppercase tracking-wider block font-semibold">Affiliate Marketing</span>
-                                <h4 class="text-lg font-bold text-white mt-1">Omzet Rp76,8 Juta / Bulan Melalui Jaringan Affiliate</h4>
-                            </div>
-                        </div>
-                        <span class="text-xs font-bold text-pink-600 uppercase tracking-wider">Affiliate Strategy</span>
-                        <h3 class="text-xl font-bold text-dark-900 mt-2 group-hover:text-pink-600 transition-colors">
-                            Membangun Sistem Affiliate Seller untuk Mendongkrak Penjualan Otomatis
-                        </h3>
-                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            Langkah demi langkah merekrut affiliate creator, menyusun struktur komisi yang memotivasi, dan melacak link pembelian baru dengan ROI lebih dari 29 kali lipat.
-                        </p>
-                    </div>
-                    <div class="pt-6 border-t border-gray-100 mt-6 flex items-center justify-between text-xs text-gray-500">
-                        <span><i class="far fa-calendar-alt mr-1"></i> 8 Menit Baca</span>
-                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20ingin%20bangun%20affiliate%20toko%20saya" target="_blank" class="font-bold text-pink-600 hover:text-pink-700 flex items-center">
-                            Bangun Affiliate <i class="fas fa-chevron-right ml-1 text-xs"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Article 4 -->
-                <article class="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-200 transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="h-48 rounded-2xl bg-gradient-to-br from-blue-700 to-indigo-900 p-6 text-white flex flex-col justify-between relative overflow-hidden mb-6">
-                            <div class="absolute -right-4 -bottom-4 w-32 h-32 bg-white/20 rounded-full blur-xl pointer-events-none"></div>
-                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold w-max">Meta Ads (FB/IG)</span>
-                            <div>
-                                <span class="text-xs text-blue-200 uppercase tracking-wider block font-semibold">ROAS Hingga 12,03x</span>
-                                <h4 class="text-lg font-bold text-white mt-1">Strategi Retargeting &amp; Dynamic Creative Ads</h4>
-                            </div>
-                        </div>
-                        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Social Ads</span>
-                        <h3 class="text-xl font-bold text-dark-900 mt-2 group-hover:text-blue-600 transition-colors">
-                            Teknik Retargeting Meta Ads yang Terbukti Menghasilkan Pembelian Berulang
-                        </h3>
-                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            Cara memanfaatkan Custom Audience, Lookalike Audience, dan Conversions API untuk menyasar kembali pengguna yang belum checkout hingga terjadi transaksi.
-                        </p>
-                    </div>
-                    <div class="pt-6 border-t border-gray-100 mt-6 flex items-center justify-between text-xs text-gray-500">
-                        <span><i class="far fa-calendar-alt mr-1"></i> 6 Menit Baca</span>
-                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20butuh%20jasa%20Meta%20Ads" target="_blank" class="font-bold text-blue-600 hover:text-blue-700 flex items-center">
-                            Pelajari <i class="fas fa-chevron-right ml-1 text-xs"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Article 5 -->
-                <article class="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-slate-300 transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="h-48 rounded-2xl bg-gradient-to-br from-slate-900 to-black p-6 text-white flex flex-col justify-between relative overflow-hidden mb-6">
-                            <div class="absolute -right-4 -bottom-4 w-32 h-32 bg-emerald-500/20 rounded-full blur-xl pointer-events-none"></div>
-                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold w-max">Growth +334%</span>
-                            <div>
-                                <span class="text-xs text-gray-300 uppercase tracking-wider block font-semibold">TikTok Shop &amp; Tokopedia</span>
-                                <h4 class="text-lg font-bold text-white mt-1">Multi-Channel Sync: Omzet Tembus Rp119,7 Juta</h4>
-                            </div>
-                        </div>
-                        <span class="text-xs font-bold text-slate-800 uppercase tracking-wider">Omnichannel Commerce</span>
-                        <h3 class="text-xl font-bold text-dark-900 mt-2 group-hover:text-slate-800 transition-colors">
-                            Kombinasi Live Stream &amp; Short Video untuk Melejitkan GMV Tokopedia &amp; TikTok
-                        </h3>
-                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            Formula konten video storytelling, flash voucher saat live shopping, dan integrasi stok multi-gudang demi menjaga metrik toko tetap 0 poin penalti.
-                        </p>
-                    </div>
-                    <div class="pt-6 border-t border-gray-100 mt-6 flex items-center justify-between text-xs text-gray-500">
-                        <span><i class="far fa-calendar-alt mr-1"></i> 5 Menit Baca</span>
-                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20ingin%20optimasi%20TikTok%20Shop" target="_blank" class="font-bold text-slate-900 hover:text-black flex items-center">
-                            Pelajari <i class="fas fa-chevron-right ml-1 text-xs"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Article 6 -->
-                <article class="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-yellow-200 transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="h-48 rounded-2xl bg-gradient-to-br from-yellow-600 via-amber-600 to-orange-800 p-6 text-white flex flex-col justify-between relative overflow-hidden mb-6">
-                            <div class="absolute -right-4 -bottom-4 w-32 h-32 bg-white/20 rounded-full blur-xl pointer-events-none"></div>
-                            <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold w-max">Website &amp; SEO</span>
-                            <div>
-                                <span class="text-xs text-yellow-200 uppercase tracking-wider block font-semibold">Web Conversion Architecture</span>
-                                <h4 class="text-lg font-bold text-white mt-1">Membangun Landing Page Berkecepatan Tinggi</h4>
-                            </div>
-                        </div>
-                        <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Web Development</span>
-                        <h3 class="text-xl font-bold text-dark-900 mt-2 group-hover:text-amber-600 transition-colors">
-                            7 Elemen Wajib Website Agensi &amp; Bisnis Agar Siap Diklankan Tanpa Bocor
-                        </h3>
-                        <p class="text-gray-600 text-sm mt-3 leading-relaxed">
-                            Struktur layout mobile-first, call-to-action WhatsApp langsung, tombol telpon satu klik, serta optimasi Core Web Vitals untuk konversi maksimal.
-                        </p>
-                    </div>
-                    <div class="pt-6 border-t border-gray-100 mt-6 flex items-center justify-between text-xs text-gray-500">
-                        <span><i class="far fa-calendar-alt mr-1"></i> 5 Menit Baca</span>
-                        <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20butuh%20jasa%20pembuatan%20website" target="_blank" class="font-bold text-amber-600 hover:text-amber-700 flex items-center">
-                            Buat Website <i class="fas fa-chevron-right ml-1 text-xs"></i>
-                        </a>
-                    </div>
-                </article>
-
+            <!-- No Results Message -->
+            <div id="no-results" class="hidden text-center py-16">
+                <i class="fas fa-search text-5xl text-gray-300 mb-4"></i>
+                <h4 class="text-xl font-bold text-gray-700">Tidak ada artikel yang cocok</h4>
+                <p class="text-gray-500 text-sm mt-1">Coba kata kunci pencarian lain atau pilih kategori Semua.</p>
             </div>
 
             <!-- CTA Box Inside Blog -->
@@ -398,7 +933,7 @@
                         KONSULTASI STRATEGI
                     </span>
                     <h3 class="text-2xl sm:text-4xl font-extrabold text-white mt-2 leading-tight">
-                        Ingin Strategi Ini Diterapkan Langsung ke Bisnis Anda?
+                        Siap Menerapkan Strategi Ini ke Bisnis Anda?
                     </h3>
                     <p class="text-white/70 text-sm sm:text-base mt-4 leading-relaxed">
                         Diskusikan target omzet, efisiensi iklan, atau kebutuhan website Anda dengan tim praktisi kami secara GRATIS tanpa komitmen.
@@ -421,6 +956,20 @@
 
         </div>
     </main>
+
+    <!-- ============================================ -->
+    <!-- ARTICLE MODAL VIEWER POPUP -->
+    <!-- ============================================ -->
+    <div id="article-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-10 relative shadow-2xl">
+            <button onclick="closeArticleModal()" class="absolute top-6 right-6 w-10 h-10 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full flex items-center justify-center transition-colors">
+                <i class="fas fa-times text-lg"></i>
+            </button>
+            <div id="modal-content">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
 
     <!-- ============================================ -->
     <!-- FOOTER -->
@@ -562,5 +1111,131 @@
 
     <!-- Main JavaScript -->
     <script src="js/main.js"></script>
+
+    <!-- Blog Interactive JavaScript (Search, Filter, Modal) -->
+    <script>
+        const articles = [{"id":1,"title":"Panduan Lengkap SEO 2026: Cara Meraih Peringkat #1 Google untuk Kata Kunci Kompetitif","cat":"seo","catLabel":"SEO & Organik","readTime":"7 Menit Baca","date":"18 Jan 2026","excerpt":"Bagaimana optimasi search intent, audit teknikal Core Web Vitals, dan arsitektur internal link berhasil menghasilkan 1,79 juta klik organik serta peringkat #1 Google pada kata kunci finansial kompetitif.","tag":"Search Engine Optimization","content":"Di era algoritma Google modern berbasis Helpful Content dan AI Overviews, memenangkan peringkat 1 tidak lagi sebatas menjejalkan kata kunci. Kunci keberhasilan terletak pada pemetaan Search Intent yang presisi, struktur artikel berbasis Entity Topical Authority, optimasi Core Web Vitals di bawah 1,5 detik, dan pembuatan backlink yang relevan. Pada studi kasus BFI Finance, implementasi strategi ini berhasil mempertahankan ranking 1 untuk keyword utama pembiayaan kendaraan dan properti."},{"id":2,"title":"Strategi Winning Campaign Google Ads B2B: Forecast Revenue Rp19,9 Miliar dengan Budget Efisien","cat":"ads","catLabel":"Google & Meta Ads","readTime":"6 Menit Baca","date":"25 Jan 2026","excerpt":"Membongkar struktur kampanye search terms, negative keywords presisi, dan sinkronisasi CRM HubSpot yang menghasilkan 301 deals berkualitas dengan modal iklan Rp10,5 Juta.","tag":"Google Search Ads","content":"Menjalankan iklan Google Search untuk B2B dan industri berat membutuhkan pendekatan berbeda dengan B2C. Kunci efisiensi ada pada eliminasi kata kunci tidak relevan menggunakan Negative Keyword list berlapis, penulisan copy iklan berbasis solusi teknis, dan menghubungkan Google Ads langsung dengan form CRM seperti HubSpot untuk memantau Deal Pipeline secara nyata."},{"id":3,"title":"Scale-Up Toko Shopee Tembus Penjualan Rp2,35 Miliar dengan Zero Penalty Point","cat":"marketplace","catLabel":"Marketplace & E-Commerce","readTime":"8 Menit Baca","date":"02 Feb 2026","excerpt":"Langkah terstruktur mengelola toko ritel Shopee dari pengaturan etalase psikologis, formula flash sale, hingga otomatisasi pemenuhan pesanan demi mencapai 0 poin penalti.","tag":"Shopee Seller Scale","content":"Mencapai omzet Rp2,35 miliar dari 1.809 pesanan terbayar di Jayco Official Store adalah hasil dari sinkronisasi antara kampanye marketplace, voucher kombo bertingkat, dan pemenuhan pesanan dalam waktu kurang dari 24 jam. Menjaga skor operasional tanpa penalti membuka akses prioritas toko di fitur rekomendasi Shopee."},{"id":4,"title":"Bongkar Taktik Shopee Ads: Meraih ROAS 84,42x Tanpa Boncos","cat":"ads","catLabel":"Google & Meta Ads","readTime":"5 Menit Baca","date":"10 Feb 2026","excerpt":"Bagaimana kampanye produk UPVC Glassy dengan modal iklan Rp55.862 mampu mencetak omzet teratribusi Rp4,72 Juta melalui penargetan kata kunci spesifik.","tag":"Shopee Ads","content":"Banyak seller boncos karena menyerahkan kata kunci iklan pada mode otomatis secara membabi buta. Taktik kami adalah memisahkan Iklan Pencarian Spesifik (Exact Match) untuk kata kunci berniat beli tinggi, mengombinasikannya dengan penyesuaian bid bertahap per 3 hari, serta memasangkan produk pancingan berkonversi tinggi."},{"id":5,"title":"Panduan Shopee Affiliate Seller: Rahasia ROI 29,5x & Penjualan Puluhan Juta per Bulan","cat":"affiliate","catLabel":"Affiliate Marketing","readTime":"7 Menit Baca","date":"17 Feb 2026","excerpt":"Membangun program komisi affiliate mandiri yang menghasilkan Rp76,8 Juta penjualan bulanan dari 11.000 klik tertarget tanpa modal iklan di awal.","tag":"Affiliate Marketing","content":"Program Affiliate Seller adalah senjata rahasia toko modern untuk mengakuisisi pembeli baru tanpa biaya iklan upfront. Dengan memberikan persentase komisi menarik pada produk unggulan, memberikan sampel gratis kepada top affiliate creator, toko Anda akan dipromosikan secara organik oleh puluhan kreator setiap hari."},{"id":6,"title":"Strategi Retargeting Meta Ads (Facebook & Instagram): Konversi Berulang dengan ROAS 12x","cat":"ads","catLabel":"Google & Meta Ads","readTime":"6 Menit Baca","date":"24 Feb 2026","excerpt":"Teknik pemanfaatan Meta Pixel, Conversions API, dan Custom Audiences untuk menyasar kembali pengunjung toko yang belum checkout hingga terjadi transaksi.","tag":"Meta Ads Retargeting","content":"Lebih dari 90% pengunjung pertama kali tidak langsung membeli. Pada akun retail DOSS Camera & Gadget, kami menerapkan funnel 3 tahap: Top of Funnel (Edukasi & Jangkauan), Middle of Funnel (Katalog Dinamis untuk Engaged User), dan Bottom of Funnel (Diskon Khusus 48 Jam untuk Add-to-Cart) yang sukses menghasilkan ROAS hingga 12,03x."},{"id":7,"title":"Integrasi Multi-Channel TikTok Shop & Tokopedia: Melejitkan GMV +334% dalam 4 Bulan","cat":"marketplace","catLabel":"Marketplace & E-Commerce","readTime":"6 Menit Baca","date":"03 Mar 2026","excerpt":"Strategi sinkronisasi inventaris, flash sale simultan, dan video pendek yang berhasil melipatgandakan GMV dari puluhan juta menjadi Rp119,7 Juta.","tag":"TikTok Shop & Tokopedia","content":"Sejak merger ekosistem TikTok Shop dan Tokopedia, jalur konversi menjadi jauh lebih cepat. Penjual yang mampu mengawinkan daya tarik video konten FYP dengan kemudahan checkout Tokopedia meraih kenaikan omzet lebih dari 334% dalam kurun waktu 4 bulan."},{"id":8,"title":"Technical SEO Audit: Optimasi Core Web Vitals & Kecepatan Indexing Google Search Console","cat":"seo","catLabel":"SEO & Organik","readTime":"8 Menit Baca","date":"11 Mar 2026","excerpt":"Langkah-langkah teknis memperbaiki LCP, FID/INP, dan CLS hingga skor PageSpeed 99/100 demi menjamin crawling bot Google berjalan sempurna.","tag":"Technical SEO","content":"Konten bagus tidak akan pernah menduduki halaman 1 jika website lambat atau memiliki masalah render blocking. Melalui kompresi aset gambar SVG, defer javascript eksternal, dan penataan sitemap XML bersih, robot penelusur Google dapat merayapi seluruh halaman produk hanya dalam hitungan detik."},{"id":9,"title":"Anatomi Landing Page Berkonversi Tinggi: Menghasilkan Leads WhatsApp Non-Stop","cat":"strategy","catLabel":"Strategi & CRM","readTime":"6 Menit Baca","date":"18 Mar 2026","excerpt":"Struktur layout landing page yang terbukti menghasilkan rasio konversi di atas 12% dengan tombol pesan langsung WhatsApp dan CTA psikologis.","tag":"Conversion Rate Optimization","content":"Landing page yang efektif tidak membuat calon pelanggan berpikir keras. Struktur hero section harus segera menjawab 3 pertanyaan dalam 3 detik: Produk apa ini? Apa keuntungannya untuk saya? Bagaimana cara mendapatkannya sekarang? Dilengkapi tombol WhatsApp mengambang dan social proof terpercaya."},{"id":10,"title":"Cara Membaca Google Analytics 4 (GA4): Menemukan Saluran Trafik Paling Menghasilkan Uang","cat":"strategy","catLabel":"Strategi & CRM","readTime":"7 Menit Baca","date":"26 Mar 2026","excerpt":"Panduan praktis navigasi User Acquisition, Session Default Channel Group, dan pelacakan Conversion Events untuk membedakan trafik berguna vs trafik zonk.","tag":"GA4 & Data Analytics","content":"Banyak pebisnis terkecoh oleh jumlah pengunjung semata tanpa tahu kanal mana yang sebenarnya menghasilkan transaksi. Dengan menyetel Key Events dan Funnel Exploration di GA4, Anda dapat langsung mengidentifikasi apakah Organic Search, Paid Ads, atau Social Media yang membawa penjualan riil."},{"id":11,"title":"Membangun Pasukan Affiliate Creator: Taktik Rekrutmen & Skema Komisi Win-Win","cat":"affiliate","catLabel":"Affiliate Marketing","readTime":"7 Menit Baca","date":"04 Apr 2026","excerpt":"Bagaimana mencari 500+ micro creator di Shopee dan TikTok untuk mereview produk Anda secara konsisten tanpa perlu membayar biaya endorsement mahal.","tag":"Creator Affiliate","content":"Kreator mikro dengan followers 5.000 - 50.000 sering kali memiliki tingkat engagement dan kepercayaan audiens yang jauh lebih tinggi daripada mega influencer. Berikan brief konten yang jelas, komisi 10-15%, dan insentif bonus target untuk mengubah mereka menjadi duta penjualan setia toko Anda."},{"id":12,"title":"Optimasi Google Business Profile (GBP): Cara Mendatangkan Ratusan Pengunjung Fisik ke Cabang","cat":"seo","catLabel":"SEO & Organik","readTime":"5 Menit Baca","date":"12 Apr 2026","excerpt":"Studi kasus BFI Cabang Tambun: Menghasilkan 442 permintaan petunjuk arah dan panggilan telepon dalam satu bulan melalui optimasi SEO lokal.","tag":"Local SEO & Google Maps","content":"Bagi bisnis dengan outlet fisik atau kantor cabang, Google Maps adalah mesin uang utama. Melengkapi kategori utama, memperbarui foto lokasi rutin, mengumpulkan ulasan bintang 5 bintang otentik, dan menyisipkan keyword lokal pada deskripsi profil akan menempatkan Anda di 3-Pack Google Local."},{"id":13,"title":"Riset Keyword Transaksional: Membedakan Informational vs Transactional Intent","cat":"seo","catLabel":"SEO & Organik","readTime":"6 Menit Baca","date":"20 Apr 2026","excerpt":"Cara menemukan kata kunci yang langsung dicari calon pembeli siap bayar menggunakan Semrush dan Google Search Console.","tag":"Keyword Research","content":"Keyword informasional seperti 'apa itu pinjaman bpkb' menarik banyak pembaca, namun keyword transaksional seperti 'tempat gadai bpkb motor terdekat resmi OJK' adalah kata kunci yang langsung mencetak omzet. Keseimbangan keduanya dalam strategi topik artikel akan mengalirkan leads terus menerus."},{"id":14,"title":"Mengoptimalkan Budget Iklan UMKM: Strategi Alokasi Modal Antara Meta Ads, Google Ads & Shopee","cat":"strategy","catLabel":"Strategi & CRM","readTime":"6 Menit Baca","date":"28 Apr 2026","excerpt":"Rumus alokasi anggaran 70-20-10 untuk membagi modal pemasaran digital agar bisnis tetap untung dan risiko boncos terkendali.","tag":"Budget Optimization","content":"Jangan menaruh seluruh telur dalam satu keranjang iklan. Alokasikan 70% budget untuk saluran terbukti menghasilkan (misal: Shopee Ads & Search Ads), 20% untuk retargeting dan penguatan awareness di Meta Ads, serta 10% untuk eksperimen format baru seperti TikTok Live atau influencer seeding."},{"id":15,"title":"Formula Live Streaming Shopping Shopee & TikTok: Trik Closing Produk Saat Siaran Langsung","cat":"marketplace","catLabel":"Marketplace & E-Commerce","readTime":"7 Menit Baca","date":"06 Mei 2026","excerpt":"Teknik menyusun naskah live, rotasi voucher kilat berbatas waktu, dan membangun urgensi belanja instan yang melipatgandakan pesanan keranjang kuning.","tag":"Live Shopping Mastery","content":"Host live streaming yang hebat bukan yang terus-menerus berteriak murah, melainkan yang memahami 'pain point' audiens. Demonstrasikan kualitas fisik produk secara nyata, buka sesi tanya jawab interaktif, dan kunci transaksi dengan diskon berbatas waktu 5 menit di keranjang belanja."},{"id":16,"title":"Pentingnya Sertifikasi Digital Marketing (Google, Semrush, HubSpot) untuk Kepercayaan Bisnis","cat":"strategy","catLabel":"Strategi & CRM","readTime":"5 Menit Baca","date":"14 Mei 2026","excerpt":"Mengapa kredensial resmi dari raksasa teknologi dunia menjadi pembeda antara agensi abal-abal dengan praktisi terpercaya yang menjaga keamanan akun Anda.","tag":"Professional Certification","content":"Platform periklanan dunia seperti Google dan HubSpot secara ketat menguji praktisi lewat program sertifikasi. Sertifikasi Google Campaign Manager 360, AI-Powered Performance Ads, dan HubSpot Inbound memastikan bahwa strategi kampanye dijalankan sesuai aturan resmi dan terhindar dari banned akun."},{"id":17,"title":"Manajemen Stok & Fulfillment Flash Sale: Mengatasi Ribuan Pesanan dalam 24 Jam","cat":"marketplace","catLabel":"Marketplace & E-Commerce","readTime":"6 Menit Baca","date":"22 Mei 2026","excerpt":"SOP pergudangan, barcode scanning packing, dan sinkronisasi stok otomatis antar-marketplace agar pengiriman tidak terlambat dan rating toko tetap bintang 4.9.","tag":"Warehouse & Fulfillment","content":"Keberhasilan marketing akan sia-sia bila bagian operasional gudang kewalahan saat ribuan paket masuk serentak. Terapkan sistem batch picking, siapkan kardus packing pracetak berlabel, dan pastikan kurir pick-up terjadwal 2 kali sehari selama masa festival belanja tanggal kembar."},{"id":18,"title":"Strategi WhatsApp & Email Automation: Mengubah Pembeli Pertama Menjadi Pelanggan Loyal","cat":"strategy","catLabel":"Strategi & CRM","readTime":"6 Menit Baca","date":"30 Mei 2026","excerpt":"Alur pesan purna-jual otomatis, kartu ucapan terima kasih dengan QR Code komisi affiliate, dan follow-up pengingat repeat order.","tag":"CRM & Retention","content":"Biaya mendapatkan pelanggan baru 5x lebih mahal daripada mempertahankan pelanggan lama. Gunakan otomatisasi WhatsApp untuk mengabarkan resi pengiriman, meminta ulasan bintang 5, dan memberikan voucher apresiasi untuk pembelian berikutnya dalam kurun waktu 14 hari."},{"id":19,"title":"Trik Copywriting Iklan Hook-Story-Offer: Formula yang Memancing Klik & Pembelian Cepat","cat":"strategy","catLabel":"Strategi & CRM","readTime":"5 Menit Baca","date":"08 Jun 2026","excerpt":"Panduan merangkai 3 detik pertama teks headline, menjembatani masalah emosional calon pembeli, dan mengakhiri dengan penawaran yang sulit ditolak.","tag":"High-Converting Copywriting","content":"Iklan yang gagal sering kali langsung jualan tanpa membangun empati terlebih dahulu. Terapkan formula: Hook (hentikan scroll dengan masalah nyata), Story (tunjukkan bagaimana produk menjadi solusi terpercaya), dan Offer (tawaran bonus garansi, diskon kilat, dan opsi pembayaran aman)."},{"id":20,"title":"Roadmap Transformasi Digital UMKM 2026: Dari Toko Konvensional Menuju Brand Digital Skala Nasional","cat":"strategy","catLabel":"Strategi & CRM","readTime":"8 Menit Baca","date":"16 Jun 2026","excerpt":"Cetak biru lengkap 12 bulan membangun kehadiran digital terpadu mulai dari website resmi, optimasi marketplace, hingga kampanye affiliate mandiri.","tag":"Digital Blueprint 2026","content":"Transformasi digital bukan tentang sekadar membuat akun medsos, melainkan membangun ekosistem terpadu: website resmi sebagai pusat kredibilitas dan SEO, toko Shopee/Tokopedia sebagai mesin kasir transaksi harian, dan jaringan affiliate creator sebagai tenaga pemasaran tak terbatas."}];
+
+        // Category Filter
+        const catButtons = document.querySelectorAll('.cat-filter-btn');
+        const cards = document.querySelectorAll('.article-card');
+        const noResults = document.getElementById('no-results');
+        const searchInput = document.getElementById('article-search');
+
+        catButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                catButtons.forEach(b => {
+                    b.classList.remove('active', 'bg-primary-600', 'text-white', 'shadow-md');
+                    b.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+                });
+                btn.classList.add('active', 'bg-primary-600', 'text-white', 'shadow-md');
+                btn.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+
+                filterArticles();
+            });
+        });
+
+        // Search Input
+        if (searchInput) {
+            searchInput.addEventListener('input', () => {
+                filterArticles();
+            });
+        }
+
+        function filterArticles() {
+            const activeBtn = document.querySelector('.cat-filter-btn.active');
+            const selectedCat = activeBtn ? activeBtn.getAttribute('data-category') : 'all';
+            const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                const titleText = card.querySelector('h3').textContent.toLowerCase();
+                const descText = card.querySelector('p').textContent.toLowerCase();
+
+                const matchesCat = (selectedCat === 'all' || cardCat === selectedCat);
+                const matchesSearch = (!query || titleText.includes(query) || descText.includes(query));
+
+                if (matchesCat && matchesSearch) {
+                    card.classList.remove('hidden-card');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden-card');
+                }
+            });
+
+            if (noResults) {
+                if (visibleCount === 0) {
+                    noResults.classList.remove('hidden');
+                } else {
+                    noResults.classList.add('hidden');
+                }
+            }
+        }
+
+        // Article Modal Viewer
+        function openArticleModal(id) {
+            const art = articles.find(a => a.id === id);
+            if (!art) return;
+
+            const modal = document.getElementById('article-modal');
+            const content = document.getElementById('modal-content');
+
+            content.innerHTML = `
+                <div class="rounded-2xl overflow-hidden mb-6 aspect-[16/9] shadow-lg">
+                    <img src="images/articles/article-${art.id}.svg" alt="${art.title}" class="w-full h-full object-cover">
+                </div>
+                <div class="flex items-center space-x-3 mb-4">
+                    <span class="px-3 py-1 bg-primary-100 text-primary-800 text-xs font-bold rounded-full">${art.catLabel}</span>
+                    <span class="text-xs text-gray-400">• ${art.date} • ${art.readTime}</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-dark-900 leading-tight mb-4">${art.title}</h2>
+                <div class="bg-primary-50 border-l-4 border-primary-600 p-4 rounded-r-xl mb-6">
+                    <p class="text-sm text-primary-900 font-medium leading-relaxed italic">${art.excerpt}</p>
+                </div>
+                <div class="prose max-w-none text-gray-700 leading-relaxed space-y-4 text-sm sm:text-base">
+                    <p>${art.content}</p>
+                    <p>Dalam menjalankan eksekusi pemasaran digital, konsistensi data dan evaluasi mingguan adalah kunci untuk memastikan anggaran tidak terbuang sia-sia. Hubungi tim ahli kami untuk mulai menerapkan blueprint ini pada bisnis Anda.</p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold text-sm">YA</div>
+                        <div>
+                            <p class="text-sm font-bold text-dark-900">Yogi Adnan</p>
+                            <p class="text-xs text-gray-400">Digital Marketing Specialist</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/6287776329910?text=Halo%20DIGMAR,%20saya%20telah%20membaca%20artikel%20'${encodeURIComponent(art.title)}'%20dan%20ingin%20konsultasi" target="_blank" class="w-full sm:w-auto px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl text-sm inline-flex items-center justify-center shadow-lg transition-colors">
+                        <i class="fab fa-whatsapp mr-2 text-lg"></i> Konsultasi Strategi via WhatsApp
+                    </a>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeArticleModal() {
+            const modal = document.getElementById('article-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal on click outside
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('article-modal');
+            if (e.target === modal) {
+                closeArticleModal();
+            }
+        });
+
+        // Close on escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeArticleModal();
+            }
+        });
+    </script>
 </body>
 </html>
